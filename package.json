@@ -1,0 +1,22 @@
+{
+  "name": "personal-website",
+  "version": "0.0.0",
+  "description": "My personal website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aaronPTB/personal-website"
+  },
+  "author": "Aaron Evans",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/aaronPTB/personal-website/issues"
+  },
+  "dependencies": {
+    "express": "~4.14.0"
+  }
+}
