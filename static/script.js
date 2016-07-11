@@ -28,7 +28,7 @@ window.onload = function() {
 		var pos = window.pageYOffset;
 
 		//Figure out current panel based on scroll pos
-		state = Math.floor(pos/(.98 * window.innerHeight));
+		state = Math.floor(pos/(.98 * window.innerHeight) + .2);
 
 		if (state != current_state) {
 			var underline = document.getElementById("underline");
