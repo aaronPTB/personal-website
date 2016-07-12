@@ -9,9 +9,9 @@ app.get("/", function(req, res) {
 });
 
 // commented out, only used for spoopy purposes
-// app.get("/nsfw", function(req, res) {
-// 	res.sendFile("static/spoopy/trash.html",{root: __dirname});
-// })
+app.get("/nsfw", function(req, res) {
+	res.sendFile("static/spoopy/trash.html",{root: __dirname});
+})
 
 app.listen(3000, function(err){
     if(err){
