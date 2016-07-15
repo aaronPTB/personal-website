@@ -7,15 +7,27 @@ body {
 h1 {
 	font-family: 'Sofia', cursive;
 	font-size: 150px;
-	color: #006666;
+	color: #224455;
 	font-weight: normal;
 	display: inline;
 }
 
 h2 {
-	font-family: 'Sofia', cursive;
+	font-family: 'Molengo', sans-serif;
 	font-size: 30px;
-	color: #006666;
+	color: #224455;
+}
+
+h3 {
+	font-family: 'Molengo', sans-serif;
+	font-size: 30px;
+	color: #333333;
+}
+
+p {
+	font-family: 'Molengo', sans-serif;
+	font-size: 16px;
+	color: #333333;
 }
 
 .section {
@@ -26,19 +38,19 @@ h2 {
 	align-items: center;
 }
 .section.white {
-	background-color: #DDDDDD;
+	background-color: #A9D0CF;
 	color: #333333;
 }
 .section.blue1 {
-	background-color: #CCCCCC;
+	background-color: #FEFAEC;
 	color: #EEEEEE;
 }
 .section.blue2 {
-	background-color: #DDDDDD;
+	background-color: #F38181;
 	color: #EEEEEE;
 }
 .section.blue3 {
-	background-color: #CCCCCC;
+	background-color: #625772;
 	color: #EEEEEE;
 }
 
@@ -48,13 +60,22 @@ h2 {
 	width: 40%;
 }
 
+.about-card {
+	width: 37%;
+	height: 100%;
+}
+
+.title {
+	text-align: center;
+}
+
 .location-disp {
 	position: fixed;
 	height: 30px;
 	width: 360px;
 	top: 20px;
 	right: 20px;
-	/*mix-blend-mode: difference;*/
+	mix-blend-mode: luminosity;
 }
 
 .top-bottom {
@@ -76,7 +97,7 @@ h2 {
 	height: 100%;
 	line-height: 21px;
 	width: auto;
-	color: #006666;
+	color: #333377;
 	font-family: helvetica;
 	font-weight: bold;
 	font-size: 16px;
@@ -92,13 +113,13 @@ h2 {
 }
 
 .loc-underline {
-	background-color: #006666;
+	background-color: #333377;
 	margin-top: 3px;
 	margin-bottom: 3px;
 	height: 3px;
 	width: 48px;
 	left: 15px;
-	/*background-blend-mode: difference;*/
+	background-blend-mode: color-burn;
 	position: relative;
 	transition: left .2s, width .2s;
 }
