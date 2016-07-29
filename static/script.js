@@ -27,7 +27,6 @@ window.onload = function() {
 		loc = position/window.innerHeight + .2;
 		state = 0;
 		for (var i = 0; i < window_positions.length; i++) {
-			console.log(window_positions[i])
 			if (loc > window_positions[i]) {
 				state = state + 1;
 			}
@@ -35,7 +34,6 @@ window.onload = function() {
 				break;
 			}
 		}
-		console.log(state)
 		return state;
 	}
 
