@@ -50,7 +50,7 @@ window.onload = function() {
 		if (state != current_state) {
 			var underline = document.getElementById("underline");
 
-			underline.style.left  = [13,92,180,270][state];
+			underline.style.left  = [13,92,180,271][state];
 			underline.style.width = getLocElementWidth(state);
 
 			current_state = state;
