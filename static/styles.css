@@ -6,26 +6,26 @@ body {
 
 h1 {
 	font-family: 'Karia', sans-serif;
-	font-size: 200px;
+	font-size: 220px;
 	font-weight: normal;
 	display: inline;
 }
 
 h2 {
 	font-family: 'Lato', sans-serif;
-	font-size: 40px;
+	font-size: 44px;
 }
 
 h3 {
 	font-family: 'Karia', sans-serif;
-	font-size: 50px;
+	font-size: 55px;
 	font-weight: normal;
 	display: inline;
 }
 
 h4 {
 	font-family: 'Lato', sans-serif;
-	font-size: 40px;
+	font-size: 44px;
 	text-align: center;
 	margin: 0px;
 	text-decoration: none;
@@ -33,7 +33,7 @@ h4 {
 
 h5 {
 	font-family: 'Pacifico', sans-serif;
-	font-size: 90px;
+	font-size: 99px;
 	color: #009988;
 	margin: 0px;
 	text-align: center;
@@ -46,7 +46,7 @@ a {
 
 p {
 	font-family: 'Lato', sans-serif;
-	font-size: 30px;
+	font-size: 33px;
 }
 
 #works {
@@ -69,6 +69,7 @@ p {
 .section.two {
 	background-color: #336680;
 	color: #EEEEEE;
+	height: 85%;
 }
 .section.three {
 	background-color: #EEEEEE;

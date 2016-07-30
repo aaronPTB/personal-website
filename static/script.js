@@ -1,7 +1,7 @@
 window.onload = function() {
 	//What panel the window is currently over
 	var current_state = 0;
-	var window_positions  = [0.98, 1.96, 2.94, 3.74]
+	var window_positions  = [0.98, 1.83, 2.63, 3.59]
 
 	//Find the rendered width of a specific loc element
 	function getLocElementWidth(index) {
@@ -17,7 +17,7 @@ window.onload = function() {
 	function bindButtonToPanel(element_id, panel_number) {
 		var element = document.getElementById(element_id);
 		element.onclick = function() {
-			window.scrollTo(0,window.innerHeight*window_positions[panel_number]);
+			window.scrollTo(0,window.innerHeight*window_positions[panel_number - 1]);
 		}
 	}
 
@@ -50,7 +50,7 @@ window.onload = function() {
 		if (state != current_state) {
 			var underline = document.getElementById("underline");
 
-			underline.style.left  = [13,92,180,271][state];
+			underline.style.left  = [13,92,180,270][state];
 			underline.style.width = getLocElementWidth(state);
 
 			current_state = state;
