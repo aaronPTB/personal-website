@@ -1,7 +1,7 @@
 window.onload = function() {
 	//What panel the window is currently over
 	var current_state = 0;
-	var window_positions  = [0, 1, 3, 4]
+	var window_positions  = [0, .9, 1.9, 3.5]
 	var renderable_items = document.getElementsByClassName("card");
 
 	//Declared here, will be added to after all helpers are defined
@@ -10,10 +10,9 @@ window.onload = function() {
 	//Check if item is on the screen
 	function checkVisible(element) {
 	  var rect = element.getBoundingClientRect();
-	  var height = window.innerHeight;
 		//If the objects bottom is above the screen or
 		//if the objects top is below the screen
-	  return !(rect.bottom < 0 || rect.top - height >= 0);
+	  return !(rect.bottom < 0 || rect.top - window.innerHeight >= 0);
 	}
 
 	//Find the rendered width of a specific loc element
@@ -30,7 +29,7 @@ window.onload = function() {
 	function bindButtonToPanel(element_id, panel_number) {
 		var element = document.getElementById(element_id);
 		element.onclick = function() {
-			window.scrollTo(0,window.innerHeight*window_positions[panel_number - 1]);
+			window.scrollTo(0,window.innerHeight*window_positions[panel_number]);
 		}
 	}
 
@@ -41,7 +40,7 @@ window.onload = function() {
 	//By comparing scroll pos to window_positions
 	function windowState(position) {
 		loc = position + .2;
-		state = 0;
+		state = -1;
 		for (var i = 0; i < window_positions.length; i++) {
 			if (loc > window_positions[i]) {
 				state = state + 1;
