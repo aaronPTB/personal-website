@@ -10,14 +10,14 @@ app.get("/", function(req, res) {
 
 // commented out, only used for spoopy purposes
 app.get("/nsfw", function(req, res) {
-	res.sendFile("static/spoopy/trash.html",{root: __dirname});
+	//res.sendFile("static/spoopy/trash.html",{root: __dirname});
 })
 
-app.listen(3000, function(err){
+app.listen(3001, function(err){
     if(err){
         console.log(err);
     }
     else{
-        console.log("The server is running on port 300");
+        console.log("The server is running on port 3001");
     }
 });
