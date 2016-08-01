@@ -2,6 +2,7 @@ body {
 		margin: 0px;
 		height: 100vh;
 		background-color: #FFFFFF;
+		z-index: 0;
 }
 
 /*Mofifications to text elements*/
@@ -19,7 +20,8 @@ h2 {
 
 p {
 	font-family: "Lato", sans-serif;
-	font-size: 35px;
+	font-size: 29px;
+	text-align: left;
 }
 
 a {
@@ -49,15 +51,17 @@ img {
 
 .section.splash-page {}
 
-.section.about {}
+.section.about {
+}
 
 .section.works {
-	height: 160vh;
+	height: 120vh;
+	display: block;
 }
 
 .section.contact-me {
 	display: block;
-	height: 55vh;
+	height: 80vh;
 	margin-top: 20vh;
 }
 
@@ -72,7 +76,8 @@ img {
 	width: 360px;
 	top: 20px;
 	right: 20px;
-	mix-blend-mode: exclusion;
+	z-index: 11;
+	/*mix-blend-mode: exclusion;*/
 }
 
 .loc-panel {
@@ -80,6 +85,7 @@ img {
 	width: 360px;
 	display: flex;
 	justify-content: space-around;
+	z-index: 11;
 }
 
 .loc-element {
@@ -95,6 +101,7 @@ img {
 	-ms-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
+	z-index: 11;
 }
 
 .loc-element:hover {
@@ -111,6 +118,7 @@ img {
 	background-blend-mode: color-burn;
 	position: relative;
 	transition: left .2s, width .2s;
+	z-index: 11;
 }
 
 /*Other styling*/
@@ -121,6 +129,17 @@ img {
 	transition: transform .3s, opacity .3s;
 	opacity: 0;
 }
+
+.col-1-2 {
+	height: 100%;
+	width: 50%;
+	float: left;
+	display: flex;
+}
+
+.col-1-2.right {justify-content: flex-start;}
+.col-1-2.left  {justify-content: flex-end;  }
+
 
 #splash-text {
 	width: 600px;
@@ -141,14 +160,13 @@ img {
 	width: 400px;
 	height: 600px;
 	right: 50px;
-	bottom: 200px
 }
 
 #classcribe {
 	width: 400px;
 	height: 600px;
 	left: 50px;
-	top: 200px;
+	top: 400px;
 }
 
 #github, #linkedin, #medium{

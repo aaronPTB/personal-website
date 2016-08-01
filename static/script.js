@@ -1,7 +1,7 @@
 window.onload = function() {
 	//What panel the window is currently over
 	var current_state = 0;
-	var window_positions  = [0, .9, 1.9, 3.5]
+	var window_positions  = [0, .9, 1.9, 3.1]
 	var renderable_items = document.getElementsByClassName("card");
 
 	//Declared here, will be added to after all helpers are defined
