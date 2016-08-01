@@ -37,9 +37,10 @@ img {
 
 /*Default section parameters*/
 .section, .subsection {
-	width: 100%;
+	width: 99%;
 	height: 100%;
 	display: flex;
+	float: left;
 	justify-content: center;
 	align-items: center;
 }
@@ -60,14 +61,24 @@ img {
 }
 
 .section.contact-me {
-	display: block;
-	height: 80vh;
-	margin-top: 20vh;
+	flex-direction: column;
 }
 
 .subsection.links {
 
 }
+
+/*just a colorful band at the side of the screen*/
+.section-trail {
+	height: 100%;
+	width: 1%;
+	float: right;
+}
+
+.section-trail.splash    {background-color: #FF7676;}
+.section-trail.about     {background-color: #F6F49D;}
+.section-trail.works     {background-color: #5DAE8B; height: 120vh;}
+.section-trail.contact-me{background-color: #466C95;}
 
 /*Top left panel*/
 .location-disp {
