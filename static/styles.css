@@ -53,10 +53,11 @@ img {
 .section.splash-page {}
 
 .section.about {
+	flex-direction: column;
 }
 
 .section.works {
-	height: 120vh;
+	height: 150vh;
 	display: block;
 }
 
@@ -77,18 +78,19 @@ img {
 
 .section-trail.splash    {background-color: #FF7676;}
 .section-trail.about     {background-color: #F6F49D;}
-.section-trail.works     {background-color: #5DAE8B; height: 120vh;}
+.section-trail.works     {background-color: #5DAE8B; height: 150vh;}
 .section-trail.contact-me{background-color: #466C95;}
 
 /*Top left panel*/
+/*Transform to center image*/
 .location-disp {
 	position: fixed;
 	height: 30px;
 	width: 360px;
 	top: 20px;
 	right: 20px;
+	/*transform: translate(180px, -15px);*/
 	z-index: 11;
-	/*mix-blend-mode: exclusion;*/
 }
 
 .loc-panel {
@@ -153,19 +155,21 @@ img {
 
 
 #splash-text {
-	width: 600px;
-	height: 400px;
-	right: 100px;
-	font-size: 200px;
+	width: 100%;
+	height: auto;
+	font-size: 100px;
 
 	transform: scale(1,1);
 	opacity: 1;
 }
 
+#about-text {}
 #about-me {
 	width: 500px;
-	height: 600px;
+	height: auto;
 }
+
+#works-text {}
 
 #robotticelli {
 	width: 400px;
@@ -179,6 +183,8 @@ img {
 	left: 50px;
 	top: 400px;
 }
+
+#contact-text {}
 
 #github, #linkedin, #medium{
 	width: 300px;
