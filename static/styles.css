@@ -4,33 +4,66 @@ body {
 		background-color: #FFFFFF;
 }
 
+/*Mofifications to text elements*/
+h1, h2 {
+	font: inherit;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-family: "Karia", sans-serif;
+	text-align: center;
+}
+
+h2 {
+	font-size: 45px;
+}
+
+p {
+	font-family: "Lato", sans-serif;
+	font-size: 35px;
+}
+
 a {
 	text-decoration: none;
 }
 
-h1 {
-	font: inherit;
-	font-family: "Karia", sans-serif;
+/*Modifications to other elements*/
+img {
+	height: auto;
+	width: 100%;
 }
 
+
 /*Default section parameters*/
-.section {
+.section, .subsection {
 	width: 100%;
-	min-height: 100%;
+	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
+.subsection {
+	height: auto;
+}
 /*Section modifications*/
 
 .section.splash-page {}
 
 .section.about {}
 
-.section.works {height: 160vh;}
+.section.works {
+	height: 160vh;
+}
 
-.section.contact-me {}
+.section.contact-me {
+	display: block;
+	height: 55vh;
+	margin-top: 20vh;
+}
+
+.subsection.links {
+
+}
 
 /*Top left panel*/
 .location-disp {
@@ -83,7 +116,7 @@ h1 {
 /*Other styling*/
 .card {
 	position: relative;
-	background-color: #CCCCCC;
+	background-color: #FFFFFF;
 	transform: scale(.8,.8);
 	transition: transform .3s, opacity .3s;
 	opacity: 0;
@@ -93,12 +126,14 @@ h1 {
 	width: 600px;
 	height: 400px;
 	right: 100px;
+	font-size: 200px;
+
 	transform: scale(1,1);
 	opacity: 1;
 }
 
 #about-me {
-	width: 430px;
+	width: 500px;
 	height: 600px;
 }
 
@@ -116,10 +151,10 @@ h1 {
 	top: 200px;
 }
 
-#facebook, #github, #linkedin{
-	width: 400px;
-	height: 400px;
+#github, #linkedin, #medium{
+	width: 300px;
+	height: 300px;
 }
 
-#facebook {right: 100px;}
-#linkedin {left:  100px;}
+#linkedin {left:  50px;}
+#medium   {right: 50px;}
