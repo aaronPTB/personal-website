@@ -10,7 +10,6 @@ h1, h2 {
 	font: inherit;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	font-family: "Karia", sans-serif;
 	text-align: center;
 }
 
@@ -107,7 +106,7 @@ img {
 	line-height: 21px;
 	width: auto;
 	color: #333333; /*BB8863*/
-	font-family: "Helvetica", sans-serif;;
+	font-family: "Karla", sans-serif;;
 	font-weight: bold;
 	font-size: 16px;
 	cursor: hand;
@@ -126,9 +125,9 @@ img {
 	background-color: #333333 /*BB886E*/;
 	margin-top: 3px;
 	margin-bottom: 3px;
-	height: 3px;
-	width: 54px;
-	left: 13px;
+	height: 2px;
+	width: 43.6px;
+	left: 20px;
 	background-blend-mode: color-burn;
 	position: relative;
 	transition: left .2s, width .2s;
@@ -158,19 +157,25 @@ img {
 #splash-text {
 	width: 100%;
 	height: auto;
+	font-family: "Karla", sans-serif;
 	font-size: 100px;
 
 	transform: scale(1,1);
 	opacity: 1;
 }
 
-#about-text {}
+#about-text {
+	font-family: "Karla", serif;
+}
+
 #about-me {
 	width: 500px;
 	height: auto;
 }
 
-#works-text {}
+#works-text {
+	font-family: "Karla", serif;
+}
 
 #robotticelli {
 	width: 400px;
@@ -185,7 +190,9 @@ img {
 	top: 400px;
 }
 
-#contact-text {}
+#contact-text {
+	font-family: "Karla", serif;
+}
 
 #github, #linkedin, #medium{
 	width: 300px;

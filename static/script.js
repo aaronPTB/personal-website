@@ -1,7 +1,7 @@
 window.onload = function() {
 	//What panel the window is currently over
 	var current_state = 0;
-	var window_positions  = [0, .9, 1.9, 3.4]
+	var window_positions  = [0, 1, 2.5, 3.5]
 	var renderable_items = document.getElementsByClassName("card");
 
 	//Declared here, will be added to after all helpers are defined
@@ -79,7 +79,7 @@ window.onload = function() {
 		if (state != current_state) {
 			var underline = document.getElementById("underline");
 
-			underline.style.left  = [13,92,180,270][state];
+			underline.style.left  = [20,101,195,283][state];
 			underline.style.width = getLocElementWidth(state);
 
 			current_state = state;
