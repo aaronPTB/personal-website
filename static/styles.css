@@ -129,6 +129,7 @@ img {
 	height: 2px;
 	width: 43.6px;
 	left: 20px;
+	top: -30px;
 	background-blend-mode: color-burn;
 	position: relative;
 	transition: left .2s, width .2s;
