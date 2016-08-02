@@ -8,6 +8,7 @@ body {
 /*Mofifications to text elements*/
 h1, h2 {
 	font: inherit;
+	font-family: "Karla",sans-serif;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	text-align: center;
@@ -157,7 +158,6 @@ img {
 #splash-text {
 	width: 100%;
 	height: auto;
-	font-family: "Karla", sans-serif;
 	font-size: 100px;
 
 	transform: scale(1,1);
@@ -165,7 +165,6 @@ img {
 }
 
 #about-text {
-	font-family: "Karla", serif;
 }
 
 #about-me {
@@ -174,12 +173,11 @@ img {
 }
 
 #works-text {
-	font-family: "Karla", serif;
 }
 
 #robotticelli {
 	width: 400px;
-	height: 600px;
+	height: 750px;
 	right: 50px;
 }
 
@@ -191,7 +189,6 @@ img {
 }
 
 #contact-text {
-	font-family: "Karla", serif;
 }
 
 #github, #linkedin, #medium{
