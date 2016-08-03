@@ -13,7 +13,7 @@ app.get("/nsfw", function(req, res) {
 	//res.sendFile("static/spoopy/trash.html",{root: __dirname});
 })
 
-app.listen(3001, function(err){
+app.listen(3000, function(err){
     if(err){
         console.log(err);
     }
