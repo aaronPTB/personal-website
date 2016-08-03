@@ -17,6 +17,7 @@
     "url": "https://github.com/aaronPTB/personal-website/issues"
   },
   "dependencies": {
-    "express": "~4.14.0"
+    "express": "~4.14.0",
+    "jquery": "^3.1.0"
   }
 }

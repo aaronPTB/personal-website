@@ -1,3 +1,5 @@
+// var $ = require("jQuery");
+
 window.onload = function() {
 	//What panel the window is currently over
 	var current_state = 0;
@@ -29,8 +31,9 @@ window.onload = function() {
 	function bindButtonToPanel(element_id, panel_number) {
 		var element = document.getElementById(element_id);
 		element.onclick = function() {
-			var new_height  = window.innerHeight*window_positions[panel_number] +"px";
-			$("body").animate({scrollTop: new_height}, 200);
+
+			$("body").animate({},200)
+			window.scrollTo(0,window.innerHeight*window_positions[panel_number]);
 		}
 	}
 
