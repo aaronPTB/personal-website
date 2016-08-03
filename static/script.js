@@ -29,7 +29,8 @@ window.onload = function() {
 	function bindButtonToPanel(element_id, panel_number) {
 		var element = document.getElementById(element_id);
 		element.onclick = function() {
-			window.scrollTo(0,window.innerHeight*window_positions[panel_number]);
+			var new_height  = window.innerHeight*window_positions[panel_number] +"px";
+			$("body").animate({scrollTop: new_height}, 200);
 		}
 	}
 
