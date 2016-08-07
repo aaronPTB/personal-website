@@ -2,9 +2,9 @@ var express = require("express");
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var ObjectId = require('mongodb').ObjectID;
-var url = 'mongodb://localhost:27017/test';
+var url = 'mongodb://localhost';
 
-app = express();
+var app = express();
 
 //----General Parameters----//
 
@@ -19,14 +19,9 @@ app.engine('html', require('hbs').__express);
 function findPost(db, id, callback) {
 	var posts = db.collection("posts").find({post_id: id});
 	posts.each(function(err, doc) {
-		if (doc != null){
-			assert.equal(err, null);
-			console.dir(doc);
-		}
-		else {
-			callback();
-		}
-	})
+		assert.equal(err, null);
+		callback(doc);
+	});
 }
 
 app.param('post', function (req, res, next, id) {
@@ -34,13 +29,27 @@ app.param('post', function (req, res, next, id) {
 	if (id == "write") {
 		res.send("coming soon");
 	}
-	else if (type(parseInt(id)) == "number"){
+	else if (typeof(parseInt(id)) == "number"){
 		id = parseInt(id);
-
-		res.render(__dirname + "/templates/blogpost.html", {title: "Hello!", post: "Hello, world!"});
+		MongoClient.connect(url, function(err, db) {
+		  assert.equal(null, err);
+		  findPost(db, id, function(doc) {
+					if (doc != null) {
+						res.render(__dirname + "/templates/blogpost.html",
+						{
+							title: doc.head,
+							post: doc.post,
+						});
+					}
+					else {
+						res.status(404).send("blogpost does not exist");
+					}
+					db.close();
+		  });
+		});
 	}
 	else {
-		res.status(404).send("blogpost not found");
+		res.status(404).send("blogpost id's must be numbers");
 	}
 });
 
