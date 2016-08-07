@@ -2,7 +2,7 @@
   "name": "personal-website",
   "version": "0.0.0",
   "description": "My personal website",
-  "main": "server.js",
+  "main": "website/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"

@@ -21,6 +21,7 @@ app.param('post', function (req, res, next, id) {
   console.log('get for post ' + id);
   next();
 });
+
 app.get("/blog/:id", function(reg, res) {
 
 })
