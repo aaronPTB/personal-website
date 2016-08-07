@@ -17,7 +17,13 @@ app.get("/nsfw", function(req, res) {
 	//res.sendFile("static/spoopy/trash.html",{root: __dirname});
 })
 
-app.get("/blog")
+app.param('post', function (req, res, next, id) {
+  console.log('get for post ' + id);
+  next();
+});
+app.get("/blog/:id", function(reg, res) {
+
+})
 
 app.listen(3000, function(err){
     if(err){
