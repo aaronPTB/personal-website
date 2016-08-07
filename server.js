@@ -3,6 +3,10 @@ app = express();
 
 app.use(express.static(__dirname + "/static"));
 app.use(express.static(__dirname + "/static/spoopy"));
+app.use(express.static(__dirname + "/static/pages/welcome"));
+
+app.set('view engine', 'html');
+app.engine('html', require('hbs').__express);
 
 app.get("/", function(req, res) {
 	res.sendFile("index.html");
@@ -13,11 +17,13 @@ app.get("/nsfw", function(req, res) {
 	//res.sendFile("static/spoopy/trash.html",{root: __dirname});
 })
 
+app.get("/blog")
+
 app.listen(3000, function(err){
     if(err){
         console.log(err);
     }
     else{
-        console.log("The server is running on port 3001");
+        console.log("The server is running on port 3000");
     }
 });
