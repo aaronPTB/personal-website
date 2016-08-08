@@ -19,11 +19,12 @@ function send404(res) {
 
 //----Handling blog IDs----//
 function findPost(db, id, callback) {
-	var posts = db.collection("posts").find({post_id: id});
-	posts.each(function(err, doc) {
-		assert.equal(err, null);
-		callback(doc);
-	});
+	db.collection("posts", function(err, collection) {
+		collection.findOne({"post-id": id}, function(err, post) {
+			console.dir(post)
+			callback(post);
+		})
+	})
 }
 
 app.param('post', function (req, res, next, id) {
@@ -37,6 +38,7 @@ app.param('post', function (req, res, next, id) {
 		  assert.equal(null, err);
 		  findPost(db, id, function(doc) {
 					if (doc != null) {
+						console.log("pass!")
 						res.render(__dirname + "/templates/blogpost.html",
 						{
 							title: doc.head,
@@ -66,14 +68,37 @@ app.get("/nsfw", function(req, res) {
 	//res.sendFile("static/spoopy/trash.html",{root: __dirname});
 })
 
-app.get("/blog/:post", function(reg, res) {
+app.get("/blog/:post", function(req, res) {
 	console.log("user accessing blog post")
 	next()
 })
 
+app.get("/create", function(req, res) {
+	console.log("connected");
+	MongoClient.connect(url, function(err, db) {
+		assert.equal(err, null);
+		db.collection("posts").insert({
+	    "post-id": 1,
+	    "head": "Test Post",
+	    "post": "Hello, world!"
+		})
+	})
+})
+
+app.get("/debug", function(req, res){
+	MongoClient.connect(url, function(err, db){
+		assert.equal(err, null);
+		var posts = db.collection("posts").find();
+		posts.each(function(err, doc) {
+			assert.equal(err, null);
+			console.dir(doc);
+		});
+	})
+})
+
 //----Handling 404s----//
 app.use(function(req, res, next) {
-  res.status(404).send('Sorry cant find that!');
+  res.sendStatus(404)
 });
 //----Opening Port for Listening----//
 
