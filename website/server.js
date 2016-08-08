@@ -38,7 +38,6 @@ app.param('post', function (req, res, next, id) {
 		  assert.equal(null, err);
 		  findPost(db, id, function(doc) {
 					if (doc != null) {
-						console.log("pass!")
 						res.render(__dirname + "/templates/blogpost.html",
 						{
 							title: doc.head,
@@ -73,17 +72,16 @@ app.get("/blog/:post", function(req, res) {
 	next()
 })
 
-app.get("/create", function(req, res) {
-	console.log("connected");
-	MongoClient.connect(url, function(err, db) {
-		assert.equal(err, null);
-		db.collection("posts").insert({
-	    "post-id": 1,
-	    "head": "Test Post",
-	    "post": "Hello, world!"
-		})
-	})
-})
+// app.get("/create", function(req, res) {
+// 	MongoClient.connect(url, function(err, db) {
+// 		assert.equal(err, null);
+// 		db.collection("posts").insert({
+// 	    "post-id": 1,
+// 	    "head": "Test Post",
+// 	    "post": "Hello, world!"
+// 		})
+// 	})
+// })
 
 app.get("/debug", function(req, res){
 	MongoClient.connect(url, function(err, db){
