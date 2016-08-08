@@ -10,14 +10,12 @@ var app = express();
 app.set('view engine', 'html');
 app.engine('html', require('hbs').__express);
 
-//app.use(express.static(__dirname + "/static/pages/404"));
-app.use(express.static(__dirname + "/static/pages/welcome"));
+app.use("/static", express.static(__dirname + "/static"))
 
-// function send404(res) {
-// 	console.log("called")
-// 	res.sendFile(__dirname + "/static/pages/404/index.html");
-// 	res.end();
-// }
+function send404(res) {
+	console.log("called")
+	res.sendFile(__dirname + "/static/pages/404/index.html");
+}
 
 //----Handling blog IDs----//
 function findPost(db, id, callback) {
@@ -46,23 +44,21 @@ app.param('post', function (req, res, next, id) {
 						});
 					}
 					else {
-						//send404(res);
+						send404(res);
 					}
 					db.close();
 		  });
 		});
 	}
 	else {
-		//send404(res);
+		send404(res);
 	}
 });
 
 //----Routing----//
 
 app.get("/", function(req, res) {
-	print("sending home page")
 	res.sendFile(__dirname + "/static/pages/welcome/index.html");
-	res.end();
 });
 
 // commented out, only used for spoopy purposes
@@ -75,6 +71,10 @@ app.get("/blog/:post", function(reg, res) {
 	next()
 })
 
+//----Handling 404s----//
+app.use(function(req, res, next) {
+  res.status(404).send('Sorry cant find that!');
+});
 //----Opening Port for Listening----//
 
 app.listen(3000, function(err){
