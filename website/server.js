@@ -38,10 +38,16 @@ app.param('post', function (req, res, next, id) {
 		  assert.equal(null, err);
 		  findPost(db, id, function(doc) {
 					if (doc != null) {
+						var id_prev = id
+						if (id > 1) {
+							id_prev = id - 1
+						}
 						res.render(__dirname + "/templates/blogpost.html",
 						{
 							title: doc.head,
 							post: doc.post,
+							pp: "http://localhost:3000/blog/" + id_prev,
+							pn: "http://localhost:3000/blog/" + (id + 1),
 						});
 					}
 					else {
