@@ -155,7 +155,6 @@ img {
 .col-1-2.right {justify-content: flex-start;}
 .col-1-2.left  {justify-content: flex-end;  }
 
-
 #splash-text {
 	width: 100%;
 	height: auto;
@@ -199,3 +198,25 @@ img {
 
 #linkedin {left:  50px;}
 #medium   {right: 50px;}
+
+/*Adding some basic mobile support*/
+
+@media only screen and (orientation: portrait) {
+
+	.col-1-2{
+		height: 50%;
+		width: 100%;
+	}
+
+	.col-1-2.right {justify-content: center;}
+	.col-1-2.left  {justify-content: center;}
+
+	#classcribe {
+		top: 0px;
+		left: 0px;
+	}
+
+	#robotticelli {
+		right: 0px;
+	}
+}
