@@ -219,4 +219,16 @@ img {
 	#robotticelli {
 		right: 0px;
 	}
+
+	.subsection.links{
+		flex-direction: column;
+	}
+
+	#medium {
+		right: 0px;
+	}
+
+	#linkedin {
+		left: 0px;
+	}
 }
