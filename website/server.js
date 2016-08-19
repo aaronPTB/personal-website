@@ -21,7 +21,7 @@ function send404(res) {
 function findPost(db, id, callback) {
 	db.collection("posts", function(err, collection) {
 		collection.findOne({"post-id": id}, function(err, post) {
-			console.dir(post)
+			console.dir(post);
 			callback(post);
 		})
 	})
@@ -71,6 +71,20 @@ app.get("/", function(req, res) {
 // commented out, only used for spoopy purposes
 app.get("/nsfw", function(req, res) {
 	//res.sendFile("static/spoopy/trash.html",{root: __dirname});
+})
+
+app.get("/blog", function(req, res) {
+	console.log("user is searching posts")
+	MongoClient.connect(url, function(err, db) {
+		assert.equal(null, err);
+		db.collection("posts", function(err, collection) {
+			collection.find({}, function(err, posts) {
+				posts.toArray(function(err, output) {
+					console.log(output);
+				})
+			})
+		})
+	})
 })
 
 app.get("/blog/:post", function(req, res) {
