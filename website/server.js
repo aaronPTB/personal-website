@@ -80,7 +80,11 @@ app.get("/blog", function(req, res) {
 		db.collection("posts", function(err, collection) {
 			collection.find({}, function(err, posts) {
 				posts.toArray(function(err, output) {
-					console.log(output);
+					console.log(output)
+					res.render(__dirname + "/templates/blogpost_nav.html",
+					{
+						posts: output
+					});
 				})
 			})
 		})
