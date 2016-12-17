@@ -1,35 +1,33 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/opt/bitnami/nodejs/bin/.node.bin',
-1 verbose cli   '/opt/bitnami/nodejs/bin/npm',
-1 verbose cli   'start' ]
-2 info using npm@3.10.8
-3 info using node@v6.9.1
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'start' ]
+2 info using npm@4.0.5
+3 info using node@v7.2.1
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
 5 info lifecycle personalwebsite@1.0.0~prestart: personalwebsite@1.0.0
 6 silly lifecycle personalwebsite@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle personalwebsite@1.0.0~start: personalwebsite@1.0.0
 8 verbose lifecycle personalwebsite@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle personalwebsite@1.0.0~start: PATH: /opt/bitnami/nodejs/lib/node_modules/npm/bin/node-gyp-bin:/home/bitnami/personal-website-full/node_modules/.bin:/opt/bitnami/redis/bin:/opt/bitnami/python/bin:/opt/bitnami/nodejs/bin:/opt/bitnami/git/bin:/opt/bitnami/apache2/bin:/opt/bitnami/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-10 verbose lifecycle personalwebsite@1.0.0~start: CWD: /home/bitnami/personal-website-full
+9 verbose lifecycle personalwebsite@1.0.0~start: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/home/aaron/Projects/misc/personal-website-full/node_modules/.bin:/home/aaron/.bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+10 verbose lifecycle personalwebsite@1.0.0~start: CWD: /home/aaron/Projects/misc/personal-website-full
 11 silly lifecycle personalwebsite@1.0.0~start: Args: [ '-c', 'webpack && babel-node ./src/app.jsx' ]
 12 silly lifecycle personalwebsite@1.0.0~start: Returned: code: 1  signal: null
 13 info lifecycle personalwebsite@1.0.0~start: Failed to exec start script
 14 verbose stack Error: personalwebsite@1.0.0 start: `webpack && babel-node ./src/app.jsx`
 14 verbose stack Exit status 1
-14 verbose stack     at EventEmitter.<anonymous> (/opt/bitnami/nodejs/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+14 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/lib/utils/lifecycle.js:279:16)
 14 verbose stack     at emitTwo (events.js:106:13)
 14 verbose stack     at EventEmitter.emit (events.js:191:7)
-14 verbose stack     at ChildProcess.<anonymous> (/opt/bitnami/nodejs/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/lib/utils/spawn.js:40:14)
 14 verbose stack     at emitTwo (events.js:106:13)
 14 verbose stack     at ChildProcess.emit (events.js:191:7)
-14 verbose stack     at maybeClose (internal/child_process.js:877:16)
+14 verbose stack     at maybeClose (internal/child_process.js:885:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid personalwebsite@1.0.0
-16 verbose cwd /home/bitnami/personal-website-full
-17 error Linux 3.13.0-100-generic
-18 error argv "/opt/bitnami/nodejs/bin/.node.bin" "/opt/bitnami/nodejs/bin/npm" "start"
-19 error node v6.9.1
-20 error npm  v3.10.8
+16 verbose cwd /home/aaron/Projects/misc/personal-website-full
+17 error Linux 4.8.13-1-ARCH
+18 error argv "/usr/bin/node" "/usr/bin/npm" "start"
+19 error node v7.2.1
+20 error npm  v4.0.5
 21 error code ELIFECYCLE
 22 error personalwebsite@1.0.0 start: `webpack && babel-node ./src/app.jsx`
 22 error Exit status 1
