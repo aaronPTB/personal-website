@@ -26824,7 +26824,15 @@
 	        _react2.default.createElement(
 	          "div",
 	          { className: "column-1000" },
-	          _react2.default.createElement("div", { id: "greeter" }),
+	          _react2.default.createElement(
+	            "div",
+	            { id: "greeter" },
+	            _react2.default.createElement(
+	              "h1",
+	              null,
+	              "hey, i'm aaron"
+	            )
+	          ),
 	          _react2.default.createElement(
 	            "div",
 	            { className: "picture-frame outer" },
