@@ -26737,7 +26737,7 @@
 /* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -26748,6 +26748,8 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(178);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26763,16 +26765,40 @@
 	  function TopBar() {
 	    _classCallCheck(this, TopBar);
 
-	    return _possibleConstructorReturn(this, (TopBar.__proto__ || Object.getPrototypeOf(TopBar)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (TopBar.__proto__ || Object.getPrototypeOf(TopBar)).call(this));
+
+	    _this.state = {
+	      items: [["who i am", "/"], ["my projects", "/projects"], ["resume", "/resume.pdf"]]
+	    };
+	    _this.redirect.bind(_this);
+	    _this.iter = 0;
+	    return _this;
 	  }
 
 	  _createClass(TopBar, [{
-	    key: "render",
+	    key: 'redirect',
+	    value: function redirect(location) {
+	      _reactRouter.browserHistory.push(location);
+	    }
+	  }, {
+	    key: 'render',
 	    value: function render() {
+	      var items = this.state.items.map(function (item) {
+	        this.iter += 1;
+	        return _react2.default.createElement(
+	          'div',
+	          { key: this.iter },
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            item[0]
+	          )
+	        );
+	      }.bind(this));
 	      return _react2.default.createElement(
-	        "div",
-	        { id: "topbar" },
-	        this.props.children
+	        'div',
+	        { id: 'topbar' },
+	        items
 	      );
 	    }
 	  }]);
