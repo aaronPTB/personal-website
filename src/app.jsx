@@ -7,6 +7,6 @@ app.get("/", function(req, res) {
   res.send("hello!");
 })
 
-app.listen(3000,'0.0.0.0', function() {
+app.listen(process.env.PORT || 5000, function() {
   console.log("app is listening");
 })
