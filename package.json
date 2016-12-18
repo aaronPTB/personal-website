@@ -4,7 +4,8 @@
   "description": "Aaron's personal website",
   "main": "src/app.jsx",
   "scripts": {
-    "start": "./node_modules/.bin/webpack && babel-node ./src/app.jsx",
+    "start":  "babel-node ./src/app.jsx",
+    "build": "./node_modules/.bin/webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
