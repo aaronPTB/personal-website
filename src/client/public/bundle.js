@@ -26926,7 +26926,10 @@
 	            null,
 	            "Hey! I'm a 19 year old Computer Science ",
 	            _react2.default.createElement("br", null),
-	            " major at the Universityof Texas at Austin and incoming summer intern at Audible, an Amazon Company. My current interests lie in web development, operating systems, robotics, and machine learning."
+	            " major at the Universityof Texas at Austin and incoming summer intern at Audible, an Amazon Company. My current interests lie in web development, operating systems, robotics, and machine learning.",
+	            _react2.default.createElement("br", null),
+	            _react2.default.createElement("br", null),
+	            "Need to contact me? Email me at aaron [at] cs.utexas.edu, or just catch me on social media."
 	          )
 	        )
 	      );
