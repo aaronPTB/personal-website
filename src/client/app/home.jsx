@@ -23,6 +23,9 @@ export default class Home extends React.Component {
             Universityof Texas at Austin and incoming summer intern at Audible,
             an Amazon Company. My current interests lie in web development,
             operating systems, robotics, and machine learning.
+            <br/><br/>
+            Need to contact me? Email me at aaron [at] cs.utexas.edu, or just
+            catch me on social media.
           </p>
         </div>
       </div>
