@@ -26770,7 +26770,6 @@
 	    _this.state = {
 	      items: [["who i am", "/"], ["my projects", "/projects"], ["resume", "/resume.pdf"]]
 	    };
-	    _this.redirect.bind(_this);
 	    _this.iter = 0;
 	    return _this;
 	  }
@@ -26787,7 +26786,7 @@
 	        this.iter += 1;
 	        return _react2.default.createElement(
 	          'div',
-	          { key: this.iter },
+	          { key: this.iter, onClick: this.redirect.bind(this, item[1]) },
 	          _react2.default.createElement(
 	            'h2',
 	            null,
@@ -26857,6 +26856,11 @@
 	              "h1",
 	              null,
 	              "hey, i'm aaron"
+	            ),
+	            _react2.default.createElement(
+	              "h2",
+	              null,
+	              "i build robots and websites"
 	            )
 	          ),
 	          _react2.default.createElement(
