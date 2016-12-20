@@ -2,7 +2,7 @@ import React from 'react';
 import { browserHistory } from 'react-router';
 
 export default class TopBar extends React.Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       items: [
@@ -36,11 +36,9 @@ export default class TopBar extends React.Component {
   }
 
   redirect(location) {browserHistory.push(location);}
-
   componentWillMount()  {this.getCurrentLocation();}
   componentWillReceiveProps() {this.getCurrentLocation();}
-
-
+  
   render() {
     var item_num = 0
     var items = this.state.items.map((function(item) {

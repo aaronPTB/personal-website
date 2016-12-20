@@ -26767,7 +26767,7 @@
 	var TopBar = function (_React$Component) {
 	  _inherits(TopBar, _React$Component);
 
-	  function TopBar() {
+	  function TopBar(props) {
 	    _classCallCheck(this, TopBar);
 
 	    var _this = _possibleConstructorReturn(this, (TopBar.__proto__ || Object.getPrototypeOf(TopBar)).call(this));
@@ -26886,32 +26886,47 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        "div",
-	        { id: "hero" },
+	        null,
 	        _react2.default.createElement(
 	          "div",
-	          { className: "column-1000" },
+	          { id: "hero" },
 	          _react2.default.createElement(
 	            "div",
-	            { id: "greeter" },
-	            _react2.default.createElement(
-	              "h1",
-	              null,
-	              "hey, i'm aaron"
-	            ),
-	            _react2.default.createElement(
-	              "h3",
-	              null,
-	              "i build robots and websites"
-	            )
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "picture-frame outer" },
+	            { className: "column-1000" },
 	            _react2.default.createElement(
 	              "div",
-	              { className: "picture-frame inner" },
-	              _react2.default.createElement("img", { className: "pricture-frame picture", src: "me.jpg", height: 250, width: 250 })
+	              { id: "greeter" },
+	              _react2.default.createElement(
+	                "h1",
+	                null,
+	                "i'm aaron"
+	              ),
+	              _react2.default.createElement(
+	                "h3",
+	                null,
+	                "i build robots and websites"
+	              )
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "picture-frame outer" },
+	              _react2.default.createElement(
+	                "div",
+	                { className: "picture-frame inner" },
+	                _react2.default.createElement("img", { className: "pricture-frame picture", src: "me.jpg", height: 250, width: 250 })
+	              )
 	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { id: "about-me", className: "column-1000" },
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "Hey! I'm a 19 year old Computer Science ",
+	            _react2.default.createElement("br", null),
+	            " major at the University of Texas at Austin. My current interests lie in web development, operating systems, robotics, and machine learning."
 	          )
 	        )
 	      );

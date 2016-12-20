@@ -63,10 +63,19 @@ h3 {
     margin-top: calc(30vh - 200px);
 }
 
+#about-me {
+  font-size: 40px;
+  line-height: 60px;
+  color: #303235;
+  padding-top: 60px;
+  height: auto;
+}
+
 .column-1000 {
   height: 100%;
   width: 1000px;
   max-width: 100%;
+  margin: auto;
 }
 
 .picture-frame.outer {
