@@ -24,6 +24,15 @@ h2 {
   display: inline;
 }
 
+h3 {
+  line-height: inherit;
+  color: #A4BCE0;
+  font-size: 37px;
+  font-family: 'Space Mono', monospace;
+  display: inline;
+}
+
+
 #topbar {
   position: fixed;
   width: 100%;
@@ -49,7 +58,7 @@ h2 {
 #greeter {
     height: 300px;
     color: #E1E8ED;
-    line-height: 300px;
+    padding-top: 30px;
     float: left;
     margin-top: calc(30vh - 200px);
 }

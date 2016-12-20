@@ -64,6 +64,10 @@
 
 	var _home2 = _interopRequireDefault(_home);
 
+	var _projects = __webpack_require__(236);
+
+	var _projects2 = _interopRequireDefault(_projects);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -90,7 +94,8 @@
 	        _react2.default.createElement(
 	          _reactRouter.Route,
 	          { path: '/', component: _main2.default },
-	          _react2.default.createElement(_reactRouter.IndexRoute, { component: _home2.default })
+	          _react2.default.createElement(_reactRouter.IndexRoute, { component: _home2.default }),
+	          _react2.default.createElement(_reactRouter.Route, { path: 'projects', component: _projects2.default })
 	        )
 	      );
 	    }
@@ -26768,25 +26773,61 @@
 	    var _this = _possibleConstructorReturn(this, (TopBar.__proto__ || Object.getPrototypeOf(TopBar)).call(this));
 
 	    _this.state = {
-	      items: [["who i am", "/"], ["my projects", "/projects"], ["resume", "/resume.pdf"]]
+	      items: [["who i am", "/"], ["my projects", "/projects"], ["resume", "/resume.pdf"]],
+	      selected: 0
+	    };
+	    _this.buttonIds = {
+	      "/": 1,
+	      "/projects": 2,
+	      "/resume": 3
 	    };
 	    _this.iter = 0;
+	    _this.getCurrentLocation = _this.getCurrentLocation.bind(_this);
+	    _this.darkColor = "#A4BCE0";
+	    _this.lightColor = "#E1E8ED";
 	    return _this;
 	  }
 
 	  _createClass(TopBar, [{
+	    key: 'getCurrentLocation',
+	    value: function getCurrentLocation() {
+	      var new_selected = location.pathname.match(/^\/\w*/);
+	      var new_selected_id = this.buttonIds[new_selected[0]];
+	      console.log(new_selected[0]);
+	      console.log(new_selected_id);
+	      if (new_selected_id != null) {
+	        this.setState({
+	          selected: new_selected_id
+	        });
+	      }
+	    }
+	  }, {
 	    key: 'redirect',
 	    value: function redirect(location) {
 	      _reactRouter.browserHistory.push(location);
 	    }
 	  }, {
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      this.getCurrentLocation();
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps() {
+	      this.getCurrentLocation();
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var item_num = 0;
 	      var items = this.state.items.map(function (item) {
 	        this.iter += 1;
+	        item_num += 1;
+	        var this_color = item_num == this.state.selected ? this.lightColor : this.darkColor;
+	        console.log(this_color);
 	        return _react2.default.createElement(
 	          'div',
-	          { key: this.iter, onClick: this.redirect.bind(this, item[1]) },
+	          { key: this.iter, onClick: this.redirect.bind(this, item[1]), style: { color: this_color } },
 	          _react2.default.createElement(
 	            'h2',
 	            null,
@@ -26858,7 +26899,7 @@
 	              "hey, i'm aaron"
 	            ),
 	            _react2.default.createElement(
-	              "h2",
+	              "h3",
 	              null,
 	              "i build robots and websites"
 	            )
@@ -26881,6 +26922,51 @@
 	}(_react2.default.Component);
 
 	exports.default = Home;
+
+/***/ },
+/* 236 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Projects = function (_React$Component) {
+	  _inherits(Projects, _React$Component);
+
+	  function Projects() {
+	    _classCallCheck(this, Projects);
+
+	    return _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).apply(this, arguments));
+	  }
+
+	  _createClass(Projects, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement("div", { id: "projects" });
+	    }
+	  }]);
+
+	  return Projects;
+	}(_react2.default.Component);
+
+	exports.default = Projects;
 
 /***/ }
 /******/ ]);

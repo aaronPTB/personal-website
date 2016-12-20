@@ -9,7 +9,7 @@ export default class TopBar extends React.Component {
         ["who i am", "/"],
         ["my projects", "/projects"],
         ["resume", "/resume.pdf"],
-      ]
+      ],
       selected: 0
     }
     this.buttonIds = {
@@ -18,11 +18,16 @@ export default class TopBar extends React.Component {
       "/resume": 3
     }
     this.iter = 0;
+    this.getCurrentLocation = this.getCurrentLocation.bind(this);
+    this.darkColor  = "#A4BCE0";
+    this.lightColor = "#E1E8ED";
   }
 
   getCurrentLocation() {
     var new_selected = location.pathname.match(/^\/\w*/);
     var new_selected_id = this.buttonIds[new_selected[0]];
+    console.log(new_selected[0]);
+    console.log(new_selected_id);
     if (new_selected_id != null) {
       this.setState({
         selected: new_selected_id,
@@ -30,15 +35,21 @@ export default class TopBar extends React.Component {
     }
   }
 
-  redirect(location) {
-    browserHistory.push(location);
-  }
+  redirect(location) {browserHistory.push(location);}
+
+  componentWillMount()  {this.getCurrentLocation();}
+  componentWillReceiveProps() {this.getCurrentLocation();}
+
 
   render() {
+    var item_num = 0
     var items = this.state.items.map((function(item) {
       this.iter += 1;
+      item_num  += 1;
+      var this_color = (item_num == this.state.selected) ? this.lightColor : this.darkColor;
+      console.log(this_color);
       return  (
-        <div key={this.iter} onClick={this.redirect.bind(this, item[1])}>
+        <div key={this.iter} onClick={this.redirect.bind(this, item[1])} style={{color: this_color}}>
           <h2>{item[0]}</h2>
         </div>
       )
