@@ -26783,8 +26783,8 @@
 	    };
 	    _this.iter = 0;
 	    _this.getCurrentLocation = _this.getCurrentLocation.bind(_this);
-	    _this.darkColor = "#BBDEFB";
-	    _this.lightColor = "#E3F2FD";
+	    _this.darkColor = "#C5CAE9";
+	    _this.lightColor = "#E8EAF6";
 	    return _this;
 	  }
 
