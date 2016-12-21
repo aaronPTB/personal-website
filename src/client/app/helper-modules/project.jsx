@@ -11,9 +11,10 @@ export default class Projects extends React.Component {
 
   render() {
     return (
-      <div id="project">
+      <div className="project">
         <div className="column-20">
-
+          <div className="marker">
+          </div>
         </div>
         <div className="column-rest">
           <div className="project-title">

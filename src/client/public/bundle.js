@@ -27091,23 +27091,36 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'column-1000' },
+	        { id: 'projects' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'column-1-2', style: { float: "left" } },
+	          { className: 'column-1000' },
 	          _react2.default.createElement(
-	            _project2.default,
-	            { title: 'test' },
-	            'Test'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'column-1-2', style: { float: "left" } },
+	            'div',
+	            { id: 'projects-title' },
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              ' Here\'s some stuff I\'ve worked on '
+	            )
+	          ),
 	          _react2.default.createElement(
-	            _project2.default,
-	            { title: 'test' },
-	            'Test'
+	            'div',
+	            { className: 'column-1-2', style: { float: "left" } },
+	            _react2.default.createElement(
+	              _project2.default,
+	              { title: 'test' },
+	              'Test'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'column-1-2', style: { float: "left" } },
+	            _react2.default.createElement(
+	              _project2.default,
+	              { title: 'test' },
+	              'Test'
+	            )
 	          )
 	        )
 	      );
@@ -27163,8 +27176,12 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        "div",
-	        { id: "project" },
-	        _react2.default.createElement("div", { className: "column-20" }),
+	        { className: "project" },
+	        _react2.default.createElement(
+	          "div",
+	          { className: "column-20" },
+	          _react2.default.createElement("div", { className: "marker" })
+	        ),
 	        _react2.default.createElement(
 	          "div",
 	          { className: "column-rest" },

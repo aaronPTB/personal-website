@@ -2,7 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Karla', sans-serif;
+  /*font-family: 'Lato', sans-serif;*/
 }
 
 html, body {
@@ -29,6 +30,15 @@ h2 {
 h3 {
   line-height: inherit;
   color: #C5CAE9;
+  font-size: 37px;
+  font-family: 'Karla', sans-serif;
+  display: inline;
+  font-weight: inherit;
+}
+
+h4 {
+  line-height: inherit;
+  color: inherit;
   font-size: 37px;
   font-family: 'Karla', sans-serif;
   display: inline;
@@ -88,11 +98,36 @@ img {
   height: 70vh;
 }
 
+#projects {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#projects-title {
+  margin: auto;
+  display: table;
+  color: #303235;
+}
+
 .column-1000 {
   height: 100%;
   width: 1000px;
   max-width: 100%;
   margin: auto;
+}
+
+.column-20 {
+  height: 100%;
+  width: 20px;
+  max-width: 100%;
+  float: left;
+}
+
+.column-rest {
+  height: 100%;
+  width: 480px;
+  float: right;
+  overflow: hidden;
 }
 
 .column-1-2 {
@@ -125,6 +160,36 @@ img {
 
 .about-text {
   height: 90%;
+}
+
+.marker {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40%;
+  padding-right: 40%;
+  height: 100%;
+  width: 100%;
+  background-color: #3F51B5;
+  background-clip: content-box;
+}
+
+.project {
+  height: 100px;
+  width: 100%;
+}
+
+.project-title {
+  font-family: 'Karla', sans-serif;
+  /*font-weight: bold;*/
+  color: #333333;
+  font-size: 20px;
+}
+
+.project-desc {
+    font-family: 'Karla', sans-serif;
+    /*font-weight: bold;*/
+    color: #333333;
+    font-size: 16px;
 }
 
 .social-media-panel {
