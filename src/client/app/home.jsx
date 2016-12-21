@@ -12,7 +12,7 @@ export default class Home extends React.Component {
             </div>
             <div className="picture-frame outer">
               <div className="picture-frame inner">
-                <img className="pricture-frame picture" src="me.jpg" height={250} width={250}/>
+                <img className="pricture-frame picture" src="me.jpg"  height={280} width={280}/>
               </div>
             </div>
           </div>

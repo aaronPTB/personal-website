@@ -19,8 +19,8 @@ export default class TopBar extends React.Component {
     }
     this.iter = 0;
     this.getCurrentLocation = this.getCurrentLocation.bind(this);
-    this.darkColor  = "#A4BCE0";
-    this.lightColor = "#E1E8ED";
+    this.darkColor  = "#BBDEFB";
+    this.lightColor = "#E3F2FD";
   }
 
   getCurrentLocation() {
@@ -38,7 +38,7 @@ export default class TopBar extends React.Component {
   redirect(location) {browserHistory.push(location);}
   componentWillMount()  {this.getCurrentLocation();}
   componentWillReceiveProps() {this.getCurrentLocation();}
-  
+
   render() {
     var item_num = 0
     var items = this.state.items.map((function(item) {

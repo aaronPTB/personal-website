@@ -26783,8 +26783,8 @@
 	    };
 	    _this.iter = 0;
 	    _this.getCurrentLocation = _this.getCurrentLocation.bind(_this);
-	    _this.darkColor = "#A4BCE0";
-	    _this.lightColor = "#E1E8ED";
+	    _this.darkColor = "#BBDEFB";
+	    _this.lightColor = "#E3F2FD";
 	    return _this;
 	  }
 
@@ -26913,7 +26913,7 @@
 	              _react2.default.createElement(
 	                "div",
 	                { className: "picture-frame inner" },
-	                _react2.default.createElement("img", { className: "pricture-frame picture", src: "me.jpg", height: 250, width: 250 })
+	                _react2.default.createElement("img", { className: "pricture-frame picture", src: "me.jpg", height: 280, width: 280 })
 	              )
 	            )
 	          )

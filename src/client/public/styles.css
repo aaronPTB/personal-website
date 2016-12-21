@@ -6,7 +6,7 @@
 }
 
 html, body {
-  background-color: #E1E8ED;
+  background-color: #E3F2FD;
 }
 
 h1 {
@@ -26,7 +26,7 @@ h2 {
 
 h3 {
   line-height: inherit;
-  color: #A4BCE0;
+  color: #BBDEFB;
   font-size: 37px;
   font-family: 'Space Mono', monospace;
   display: inline;
@@ -37,8 +37,8 @@ h3 {
   position: fixed;
   width: 100%;
   height: 60px;
-  background-color: #0048BC;
-  color: #E1E8ED;
+  background-color: #2196F3;
+  color: #E3F2FD;
   display: flex;
   justify-content: space-around;
   padding-left: 25%;
@@ -49,15 +49,15 @@ h3 {
 #hero {
   height: 30vh;
   width: 100%;
-  background-color: #0048BC;
-  box-shadow: 0px 0px 2px 2px #303235;
+  background-color: #2196F3;
+  /*box-shadow: 0px 0px 2px 2px #303235;*/
   display: flex;
   justify-content: center;
 }
 
 #greeter {
     height: 300px;
-    color: #E1E8ED;
+    color: #E3F2FD;
     padding-top: 30px;
     float: left;
     margin-top: calc(30vh - 200px);
@@ -82,17 +82,17 @@ h3 {
   height: 300px;
   width: 300px;
   border-radius: 300px;
-  box-shadow: 0px 0px 2px 2px #303235;
-  background-color: #DB0054;
+  box-shadow: 0px 0px 5px 0px #303235;
+  background-color: #FF5252;
   float: right;
   margin-top: calc(30vh - 200px);
 }
 
 .picture-frame.inner {
-  height: 250px;
-  width: 250px;
-  border-radius: 250px;
-  margin: 25px;
+  height: 280px;
+  width: 280px;
+  border-radius: 280px;
+  margin: 10px;
   overflow: hidden;
 }
 
