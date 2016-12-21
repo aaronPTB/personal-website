@@ -26913,7 +26913,7 @@
 	              _react2.default.createElement(
 	                "div",
 	                { className: "picture-frame inner" },
-	                _react2.default.createElement("img", { className: "pricture-frame picture", src: "me.jpg", height: 280, width: 280 })
+	                _react2.default.createElement("img", { className: "pricture-frame picture", src: "me.jpg" })
 	              )
 	            )
 	          )

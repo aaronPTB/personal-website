@@ -12,7 +12,7 @@ html, body {
 h1 {
   line-height: inherit;
   color: inherit;
-  font-size: 70px;
+  font-size: 105px;
   font-family: 'Karla', sans-serif;
   font-weight: inherit;
 }
@@ -45,6 +45,11 @@ i:hover {
   color: #3F51B5;
 }
 
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
 #topbar {
   position: fixed;
   width: 100%;
@@ -56,10 +61,11 @@ i:hover {
   padding-left: 25%;
   padding-right: 25%;
   line-height: 60px;
+  font-weight: bold;
 }
 
 #hero {
-  height: 30vh;
+  height: 75vh;
   width: 100%;
   background-color: #3F51B5;
   /*box-shadow: 0px 0px 2px 2px #303235;*/
@@ -70,14 +76,14 @@ i:hover {
 #greeter {
     height: 300px;
     color: #E8EAF6;
-    padding-top: 30px;
+    padding-top: 32vh;
     float: left;
     margin-top: calc(30vh - 200px);
 }
 
 #about-me {
   font-size: 40px;
-  line-height: 60px;
+  line-height: 150%;
   color: #303235;
   padding-top: 60px;
   height: 70vh;
@@ -91,19 +97,19 @@ i:hover {
 }
 
 .picture-frame.outer {
-  height: 300px;
-  width: 300px;
-  border-radius: 300px;
-  box-shadow: 0px 0px 5px 0px #303235;
-  background-color: #FF5252;
+  height: 40vh;
+  width: 40vh;
+  border-radius: 40vh;
+  /*box-shadow: 0px 0px 5px 0px #303235;*/
+  background-color: #3F51B5;
   float: right;
-  margin-top: calc(30vh - 200px);
+  margin-top: 30vh;
 }
 
 .picture-frame.inner {
-  height: 280px;
-  width: 280px;
-  border-radius: 280px;
+  height: 38vh;
+  width: 38vh;
+  border-radius: 38vh;
   margin: 10px;
   overflow: hidden;
 }
