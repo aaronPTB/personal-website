@@ -18,15 +18,19 @@ export default class Home extends React.Component {
           </div>
         </div>
         <div id="about-me" className="column-1000">
-          <p>
+          <p className="about-text">
             Hey! I'm a 19 year old Computer Science <br/> major at the
-            Universityof Texas at Austin and incoming summer intern at Audible,
+            University of Texas at Austin and incoming summer intern at Audible,
             an Amazon Company. My current interests lie in web development,
             operating systems, robotics, and machine learning.
             <br/><br/>
             Need to contact me? Email me at aaron [at] cs.utexas.edu, or just
             catch me on social media.
           </p>
+          <div className="social-media-panel">
+            <i className="fa fa-facebook fa-lg"></i>
+            <i className="fa fa-twitter fa-lg"></i>
+          </div>
         </div>
       </div>
     )
