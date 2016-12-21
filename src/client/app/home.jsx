@@ -7,8 +7,8 @@ export default class Home extends React.Component {
         <div id="hero">
           <div className="column-1000">
             <div id="greeter">
-              <h1>i'm aaron</h1>
-              <h3>i build robots and websites</h3>
+              <h1>I'm Aaron</h1>
+              <h3>I build robots and websites</h3>
             </div>
             <div className="picture-frame outer">
               <div className="picture-frame inner">
@@ -29,7 +29,7 @@ export default class Home extends React.Component {
           </p>
           <div className="social-media-panel">
             <i className="fa fa-twitter"></i>
-            <i className="fa fa-facebook"></i>
+            <i className="fa fa-linkedin"></i>
             <i className="fa fa-github"></i>
           </div>
         </div>

@@ -6,9 +6,9 @@ export default class TopBar extends React.Component {
     super();
     this.state = {
       items: [
-        ["who i am", "/"],
-        ["my projects", "/projects"],
-        ["resume", "/resume.pdf"],
+        ["Me", "/"],
+        ["My Projects", "/projects"],
+        ["My Resume", "/resume.pdf"],
       ],
       selected: 0
     }

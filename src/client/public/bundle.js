@@ -26773,7 +26773,7 @@
 	    var _this = _possibleConstructorReturn(this, (TopBar.__proto__ || Object.getPrototypeOf(TopBar)).call(this));
 
 	    _this.state = {
-	      items: [["who i am", "/"], ["my projects", "/projects"], ["resume", "/resume.pdf"]],
+	      items: [["Me", "/"], ["My Projects", "/projects"], ["My Resume", "/resume.pdf"]],
 	      selected: 0
 	    };
 	    _this.buttonIds = {
@@ -26899,12 +26899,12 @@
 	              _react2.default.createElement(
 	                "h1",
 	                null,
-	                "i'm aaron"
+	                "I'm Aaron"
 	              ),
 	              _react2.default.createElement(
 	                "h3",
 	                null,
-	                "i build robots and websites"
+	                "I build robots and websites"
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -26926,7 +26926,7 @@
 	            { className: "about-text" },
 	            "Hey! I'm a 19 year old Computer Science ",
 	            _react2.default.createElement("br", null),
-	            " major at the University of Texas at Austin and incoming summer intern at Audible, an Amazon Company. My current interests lie in web development, operating systems, robotics, and machine learning.",
+	            " major at the University of Texas at Austin and incoming summer intern at Audible, an Amazon Company. Currently interested in web development, operating systems, robotics, and machine learning.",
 	            _react2.default.createElement("br", null),
 	            _react2.default.createElement("br", null),
 	            "Need to contact me? Email me at aaron [at] cs.utexas.edu, or just catch me on social media."
@@ -26935,7 +26935,7 @@
 	            "div",
 	            { className: "social-media-panel" },
 	            _react2.default.createElement("i", { className: "fa fa-twitter" }),
-	            _react2.default.createElement("i", { className: "fa fa-facebook" }),
+	            _react2.default.createElement("i", { className: "fa fa-linkedin" }),
 	            _react2.default.createElement("i", { className: "fa fa-github" })
 	          )
 	        )
