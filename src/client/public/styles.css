@@ -81,10 +81,10 @@ img {
 }
 
 #about-me {
-  font-size: 40px;
-  line-height: 150%;
+  font-size: 30px;
+  line-height: 200%;
   color: #303235;
-  padding-top: 60px;
+  padding-top: 30px;
   height: 70vh;
 }
 
@@ -95,10 +95,15 @@ img {
   margin: auto;
 }
 
+.column-1-2 {
+  height: 100%;
+  width: 50%;
+}
+
 .picture-frame.outer {
-  height: 40vh;
-  width: 40vh;
-  border-radius: 40vh;
+  height: 40vmin;
+  width: 40vmin;
+  border-radius: 40vmin;
   /*box-shadow: 0px 0px 5px 0px #303235;*/
   background-color: #3949AB;
   float: right;
@@ -106,10 +111,10 @@ img {
 }
 
 .picture-frame.inner {
-  height: 38vh;
-  width: 38vh;
-  border-radius: 38vh;
-  margin: 1vh;
+  height: 38vmin;
+  width: 38vmin;
+  border-radius: 38vmin;
+  margin: 1vmin;
   overflow: hidden;
 }
 
