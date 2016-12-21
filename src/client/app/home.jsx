@@ -21,7 +21,7 @@ export default class Home extends React.Component {
           <p className="about-text">
             Hey! I'm a 19 year old Computer Science <br/> major at the
             University of Texas at Austin and incoming summer intern at Audible,
-            an Amazon Company. My current interests lie in web development,
+            an Amazon Company. Currently interested in web development,
             operating systems, robotics, and machine learning.
             <br/><br/>
             Need to contact me? Email me at aaron [at] cs.utexas.edu, or just
