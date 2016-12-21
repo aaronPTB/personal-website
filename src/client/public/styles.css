@@ -37,13 +37,12 @@ h3 {
 
 i {
   height: 26px;
-  color: #3F51B5;
   transition: color .2s;
   cursor: pointer;
 }
 
 i:hover {
-  color: #7986CB;
+  color: #3F51B5;
 }
 
 #topbar {
