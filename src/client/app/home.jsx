@@ -28,8 +28,9 @@ export default class Home extends React.Component {
             catch me on social media.
           </p>
           <div className="social-media-panel">
-            <i className="fa fa-facebook fa-lg"></i>
-            <i className="fa fa-twitter fa-lg"></i>
+            <i className="fa fa-twitter"></i>
+            <i className="fa fa-facebook"></i>
+            <i className="fa fa-github"></i>
           </div>
         </div>
       </div>

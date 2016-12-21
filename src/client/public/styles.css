@@ -13,25 +13,38 @@ h1 {
   line-height: inherit;
   color: inherit;
   font-size: 70px;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Karla', sans-serif;
+  font-weight: inherit;
 }
 
 h2 {
   line-height: inherit;
   color: inherit;
   font-size: 20px;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Karla', sans-serif;
   display: inline;
+  font-weight: inherit;
 }
 
 h3 {
   line-height: inherit;
   color: #C5CAE9;
   font-size: 37px;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Karla', sans-serif;
   display: inline;
+  font-weight: inherit;
 }
 
+i {
+  height: 26px;
+  color: #3F51B5;
+  transition: color .2s;
+  cursor: pointer;
+}
+
+i:hover {
+  color: #7986CB;
+}
 
 #topbar {
   position: fixed;
@@ -107,12 +120,14 @@ h3 {
 
 .social-media-panel {
   height: 10%;
+  font-size: .7em;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
 }
 
 .fa {
-  margin-left: 20px;
-  margin-right: 20px
+  margin-left: 30px;
+  margin-right: 30px;
 }

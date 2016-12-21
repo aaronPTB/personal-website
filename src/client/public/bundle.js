@@ -26934,8 +26934,9 @@
 	          _react2.default.createElement(
 	            "div",
 	            { className: "social-media-panel" },
-	            _react2.default.createElement("i", { className: "fa fa-facebook fa-lg" }),
-	            _react2.default.createElement("i", { className: "fa fa-twitter fa-lg" })
+	            _react2.default.createElement("i", { className: "fa fa-twitter" }),
+	            _react2.default.createElement("i", { className: "fa fa-facebook" }),
+	            _react2.default.createElement("i", { className: "fa fa-github" })
 	          )
 	        )
 	      );
