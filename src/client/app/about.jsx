@@ -13,11 +13,6 @@ export default class Hero extends React.Component {
           {`Need to contact me? Email me at aaron [at] cs.utexas.edu, or just
           catch me on social media.`}
         </p>
-        <div className="social-media-panel">
-          <i className="fa fa-twitter"></i>
-          <i className="fa fa-linkedin"></i>
-          <i className="fa fa-github"></i>
-        </div>
       </div>
     )
   }
