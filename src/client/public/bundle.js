@@ -27109,17 +27109,43 @@
 	            { className: 'column-1-2', style: { float: "left" } },
 	            _react2.default.createElement(
 	              _project2.default,
-	              { title: 'test' },
-	              'Test'
+	              { hang: 'right', title: 'Incoming Intern at Audible (Summer 2017)' },
+	              'Summer intern at Audible, an Amazon Company. Project and\n                location TBD'
+	            ),
+	            _react2.default.createElement(
+	              _project2.default,
+	              { hang: 'right', title: 'Student Software Engineer (Fall 2016 - Spring 2017)' },
+	              'Implemented database, server, and web app to handle statuses of\n                around 500 elevators across the UT Austin campus'
+	            ),
+	            _react2.default.createElement(
+	              _project2.default,
+	              { hang: 'right', title: 'Bioinformatics Research Assistant (Summer 2016)' },
+	              'Used statistical techniques and machine learning to identify\n                genetic expression patterns in neuron DNA.'
 	            )
 	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'column-1-2', style: { float: "left" } },
+	            _react2.default.createElement('div', { style: { height: "40px" } }),
 	            _react2.default.createElement(
 	              _project2.default,
-	              { title: 'test' },
-	              'Test'
+	              { hang: 'left', title: 'Mural Painting Robot \'Roboticelli\'' },
+	              'Ongoing collaborative project with an Artist and the city of\n                Austin. A robot that can paint murals on walls.'
+	            ),
+	            _react2.default.createElement(
+	              _project2.default,
+	              { hang: 'left', title: 'Classify' },
+	              'HackTX 2016 project. A schedule building system delivering a\n                strong user experience. UT Faculty took notice have reached out\n                to us to integrate our product with theirs'
+	            ),
+	            _react2.default.createElement(
+	              _project2.default,
+	              { hang: 'left', title: 'Simple Rendering Engine' },
+	              'A simple rendering engine and 3d environment that allows for\n                camera manipulation and object movement / rotation. Created in\n                2015 for fun.'
+	            ),
+	            _react2.default.createElement(
+	              _project2.default,
+	              { hang: 'left', title: 'ClassScribe' },
+	              'Crowdsourced lecture notes for the classroom. Created for\n                HackDFW 2016s'
 	            )
 	          )
 	        )
@@ -27156,54 +27182,95 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Projects = function (_React$Component) {
-	  _inherits(Projects, _React$Component);
+	var Project = function (_React$Component) {
+	  _inherits(Project, _React$Component);
 
-	  function Projects(props) {
-	    _classCallCheck(this, Projects);
+	  function Project(props) {
+	    _classCallCheck(this, Project);
 
-	    var _this = _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this));
+	    var _this = _possibleConstructorReturn(this, (Project.__proto__ || Object.getPrototypeOf(Project)).call(this));
 
 	    _this.state = {
 	      type: props.type,
-	      title: props.title
+	      title: props.title,
+	      subtitle: props.subtitle,
+	      hang: props.hang
 	    };
+	    _this.renderHTML = null;
 	    return _this;
 	  }
 
-	  _createClass(Projects, [{
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "div",
-	        { className: "project" },
-	        _react2.default.createElement(
+	  _createClass(Project, [{
+	    key: "componentWillMount",
+	    value: function componentWillMount() {
+	      console.log(this.state.hang);
+	      if (this.state.hang == "left") {
+	        this.renderHTML = _react2.default.createElement(
 	          "div",
-	          { className: "column-20" },
-	          _react2.default.createElement("div", { className: "marker" })
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "column-rest" },
+	          { className: "project" },
 	          _react2.default.createElement(
 	            "div",
-	            { className: "project-title" },
-	            this.props.title
+	            { className: "column-20", style: { float: "left" } },
+	            _react2.default.createElement("div", { className: "marker" })
 	          ),
 	          _react2.default.createElement(
 	            "div",
-	            { className: "project-desc" },
-	            this.props.children
+	            { className: "column-rest", style: { float: "right" } },
+	            _react2.default.createElement(
+	              "div",
+	              { className: "project-title", style: { textAlign: "left" } },
+	              this.props.title
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "project-desc", style: { textAlign: "left" } },
+	              this.props.children
+	            )
 	          )
-	        )
+	        );
+	      } else {
+	        this.renderHTML = _react2.default.createElement(
+	          "div",
+	          { className: "project" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "column-rest", style: { float: "left" } },
+	            _react2.default.createElement(
+	              "div",
+	              { className: "project-title", style: { textAlign: "right" } },
+	              this.props.title
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "project-desc", style: { textAlign: "right" } },
+	              this.props.children
+	            )
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            { className: "column-20", style: { float: "right" } },
+	            _react2.default.createElement("div", { className: "marker" })
+	          )
+	        );
+	      }
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      var toRender = this.renderHTML;
+	      console.log(toRender);
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        toRender
 	      );
 	    }
 	  }]);
 
-	  return Projects;
+	  return Project;
 	}(_react2.default.Component);
 
-	exports.default = Projects;
+	exports.default = Project;
 
 /***/ }
 /******/ ]);

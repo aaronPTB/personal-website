@@ -106,6 +106,7 @@ img {
 #projects-title {
   margin: auto;
   display: table;
+  padding-bottom: 60px;
   color: #303235;
 }
 
@@ -120,13 +121,11 @@ img {
   height: 100%;
   width: 20px;
   max-width: 100%;
-  float: left;
 }
 
 .column-rest {
   height: 100%;
   width: 480px;
-  float: right;
   overflow: hidden;
 }
 
@@ -176,6 +175,13 @@ img {
 .project {
   height: 100px;
   width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  transition: transform .1s;;
+}
+
+.project:hover {
+  transform: scale(1.01);
 }
 
 .project-title {
