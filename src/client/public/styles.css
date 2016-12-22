@@ -39,7 +39,7 @@ h3 {
 h4 {
   line-height: inherit;
   color: inherit;
-  font-size: 37px;
+  font-size: inherit;
   font-family: 'Karla', sans-serif;
   display: inline;
   font-weight: inherit;
@@ -91,10 +91,12 @@ img {
 }
 
 #about-me {
-  font-size: 30px;
+  font-size: 25px;
   line-height: 200%;
   color: #303235;
   padding-top: 30px;
+  width: 600px;
+  max-width: 100%;
 }
 
 #projects {
@@ -107,6 +109,7 @@ img {
   display: table;
   padding-top: 60px;
   color: #303235;
+  font-size: 30px;
 }
 
 #links {
@@ -120,8 +123,8 @@ img {
 .column-1000 {
   height: auto;
   display: table;
-  width: 1000px;
-  max-width: 100%;
+  width: 100vw;
+  max-width: 1000px;
   margin: auto;
 }
 

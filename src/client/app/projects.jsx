@@ -17,7 +17,7 @@ export default class Projects extends React.Component {
             </Project>
             <Project hang="right" title="Student Software Engineer" sub="UT Austin, Fall 2016 - Spring 2017">
               {`Implemented database, server, and web app to handle statuses of
-                around 500 elevators across the UT Austin campus`}
+                500 elevators at UT Austin `}
             </Project>
             <Project hang="right" title="Bioinformatics Research Assistant" sub="UT Austin, Summer 2016">
               {`Used statistical techniques and machine learning to identify
