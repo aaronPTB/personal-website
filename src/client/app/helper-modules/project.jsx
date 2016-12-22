@@ -6,15 +6,14 @@ export default class Project extends React.Component {
     this.state = {
       type: props.type,
       title: props.title,
-      subtitle: props.subtitle,
+      subtitle: props.sub,
       hang: props.hang
     }
     this.renderHTML = null;
   }
 
   componentWillMount() {
-    console.log(this.state.hang)
-    if (this.state.hang == "left") {
+    if (this.props.hang == "left") {
       this.renderHTML = (
         <div className="project">
           <div className="column-20" style={{float: "left"}}>
@@ -23,6 +22,9 @@ export default class Project extends React.Component {
           <div className="column-rest" style={{float: "right"}}>
             <div className="project-title" style={{textAlign: "left"}}>
               {this.props.title}
+            </div>
+            <div className="project-subtitle" style={{textAlign: "left"}}>
+              {this.props.sub}
             </div>
             <div className="project-desc" style={{textAlign: "left"}}>
               {this.props.children}
@@ -37,6 +39,9 @@ export default class Project extends React.Component {
           <div className="column-rest" style={{float: "left"}}>
             <div className="project-title" style={{textAlign: "right"}}>
               {this.props.title}
+            </div>
+            <div className="project-subtitle" style={{textAlign: "right"}}>
+              {this.props.sub}
             </div>
             <div className="project-desc" style={{textAlign: "right"}}>
               {this.props.children}

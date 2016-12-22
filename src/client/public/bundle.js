@@ -27099,32 +27099,32 @@
 	            _react2.default.createElement(
 	              'h4',
 	              null,
-	              ' Here\'s some stuff I\'ve worked on '
+	              ' My work experience and some projects '
 	            )
 	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'column-1-2', style: { float: "left" } },
+	            _react2.default.createElement('div', { style: { height: "80px" } }),
 	            _react2.default.createElement(
 	              _project2.default,
-	              { hang: 'right', title: 'Incoming Intern at Audible (Summer 2017)' },
-	              'Summer intern at Audible, an Amazon Company. Project and\n                location TBD'
+	              { hang: 'right', title: 'Summer Intern, Audible', sub: 'Newark, NJ. Incoming Summer 2017' },
+	              'Incoming summer intern at Audible, an Amazon Company. Project and\n                location TBD'
 	            ),
 	            _react2.default.createElement(
 	              _project2.default,
-	              { hang: 'right', title: 'Student Software Engineer (Fall 2016 - Spring 2017)' },
+	              { hang: 'right', title: 'Student Software Engineer', sub: 'UT Austin, Fall 2016 - Spring 2017' },
 	              'Implemented database, server, and web app to handle statuses of\n                around 500 elevators across the UT Austin campus'
 	            ),
 	            _react2.default.createElement(
 	              _project2.default,
-	              { hang: 'right', title: 'Bioinformatics Research Assistant (Summer 2016)' },
-	              'Used statistical techniques and machine learning to identify\n                genetic expression patterns in neuron DNA.'
+	              { hang: 'right', title: 'Bioinformatics Research Assistant', sub: 'UT Austin, Summer 2016' },
+	              'Used statistical techniques and machine learning to identify\n                genetic expression patterns in neurons.'
 	            )
 	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'column-1-2', style: { float: "left" } },
-	            _react2.default.createElement('div', { style: { height: "40px" } }),
 	            _react2.default.createElement(
 	              _project2.default,
 	              { hang: 'left', title: 'Mural Painting Robot \'Roboticelli\'' },
@@ -27132,8 +27132,8 @@
 	            ),
 	            _react2.default.createElement(
 	              _project2.default,
-	              { hang: 'left', title: 'Classify' },
-	              'HackTX 2016 project. A schedule building system delivering a\n                strong user experience. UT Faculty took notice have reached out\n                to us to integrate our product with theirs'
+	              { hang: 'left', title: 'Classify', sub: 'HackTX 2016 Project' },
+	              'Schedule building system delivering a strong user experience.\n                University faculty have reached out to us for collaboration.'
 	            ),
 	            _react2.default.createElement(
 	              _project2.default,
@@ -27142,7 +27142,7 @@
 	            ),
 	            _react2.default.createElement(
 	              _project2.default,
-	              { hang: 'left', title: 'ClassScribe' },
+	              { hang: 'left', title: 'Classcribe' },
 	              'Crowdsourced lecture notes for the classroom. Created for\n                HackDFW 2016s'
 	            )
 	          )
@@ -27191,7 +27191,7 @@
 	    _this.state = {
 	      type: props.type,
 	      title: props.title,
-	      subtitle: props.subtitle,
+	      subtitle: props.sub,
 	      hang: props.hang
 	    };
 	    _this.renderHTML = null;
@@ -27201,8 +27201,7 @@
 	  _createClass(Project, [{
 	    key: "componentWillMount",
 	    value: function componentWillMount() {
-	      console.log(this.state.hang);
-	      if (this.state.hang == "left") {
+	      if (this.props.hang == "left") {
 	        this.renderHTML = _react2.default.createElement(
 	          "div",
 	          { className: "project" },
@@ -27218,6 +27217,11 @@
 	              "div",
 	              { className: "project-title", style: { textAlign: "left" } },
 	              this.props.title
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "project-subtitle", style: { textAlign: "left" } },
+	              this.props.sub
 	            ),
 	            _react2.default.createElement(
 	              "div",
@@ -27237,6 +27241,11 @@
 	              "div",
 	              { className: "project-title", style: { textAlign: "right" } },
 	              this.props.title
+	            ),
+	            _react2.default.createElement(
+	              "div",
+	              { className: "project-subtitle", style: { textAlign: "right" } },
+	              this.props.sub
 	            ),
 	            _react2.default.createElement(
 	              "div",
