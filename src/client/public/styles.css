@@ -235,6 +235,13 @@ a {
   transition: transform .1s;
 }
 
+@media (max-width: 1000px) {
+  .project {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
 .project:hover {
   transform: scale(1.01);
 }

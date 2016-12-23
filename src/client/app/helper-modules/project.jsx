@@ -7,7 +7,7 @@ export default class Project extends React.Component {
       type: props.type,
       title: props.title,
       subtitle: props.sub,
-      hang: props.hang
+      hang: props.hang,
     }
     this.renderHTML = null;
   }
