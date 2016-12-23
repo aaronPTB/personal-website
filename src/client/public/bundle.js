@@ -27104,7 +27104,7 @@
 	            _react2.default.createElement(
 	              _project2.default,
 	              { hang: 'right', title: 'Summer Intern, Audible', sub: 'Newark, NJ. Incoming Summer 2017' },
-	              'Incoming summer intern at Audible, an Amazon Company. Project and\n                location TBD'
+	              'Incoming summer intern at Audible, an Amazon Company. Project TBD.'
 	            ),
 	            _react2.default.createElement(
 	              _project2.default,
@@ -27316,9 +27316,16 @@
 	        _react2.default.createElement(
 	          "div",
 	          { className: "social-media-panel" },
-	          _react2.default.createElement("i", { className: "fa fa-twitter" }),
-	          _react2.default.createElement("i", { className: "fa fa-linkedin" }),
-	          _react2.default.createElement("i", { className: "fa fa-github" })
+	          _react2.default.createElement(
+	            "a",
+	            { href: "https://linkedin.com/in/aaronptb" },
+	            _react2.default.createElement("i", { className: "fa fa-linkedin" })
+	          ),
+	          _react2.default.createElement(
+	            "a",
+	            { href: "https://github.com/aaronptb" },
+	            _react2.default.createElement("i", { className: "fa fa-github" })
+	          )
 	        )
 	      );
 	    }

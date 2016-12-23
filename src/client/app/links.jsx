@@ -5,9 +5,8 @@ export default class Links extends React.Component {
     return (
       <div id="links" className="column-1000">
         <div className="social-media-panel">
-          <i className="fa fa-twitter"></i>
-          <i className="fa fa-linkedin"></i>
-          <i className="fa fa-github"></i>
+          <a href="https://linkedin.com/in/aaronptb"><i className="fa fa-linkedin"></i></a>
+          <a href="https://github.com/aaronptb"><i className="fa fa-github"></i></a>
         </div>
       </div>
     )

@@ -60,6 +60,10 @@ img {
   max-width: 100%;
 }
 
+a {
+  color: inherit;
+}
+
 #topbar {
   position: fixed;
   width: 100%;

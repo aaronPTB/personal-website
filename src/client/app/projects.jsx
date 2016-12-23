@@ -12,8 +12,7 @@ export default class Projects extends React.Component {
           <div className="column-1-2" style={{float: "left"}}>
             <div style={{height: "80px"}}></div>
             <Project hang="right" title="Summer Intern, Audible" sub="Newark, NJ. Incoming Summer 2017">
-              {`Incoming summer intern at Audible, an Amazon Company. Project and
-                location TBD`}
+              {`Incoming summer intern at Audible, an Amazon Company. Project TBD.`}
             </Project>
             <Project hang="right" title="Student Software Engineer" sub="UT Austin, Fall 2016 - Spring 2017">
               {`Implemented database, server, and web app to handle statuses of
