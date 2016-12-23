@@ -26727,7 +26727,6 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'main-wrapper' },
-	        _react2.default.createElement(_topbar2.default, null),
 	        this.props.children
 	      );
 	    }
@@ -26773,7 +26772,7 @@
 	    var _this = _possibleConstructorReturn(this, (TopBar.__proto__ || Object.getPrototypeOf(TopBar)).call(this));
 
 	    _this.state = {
-	      items: [["Me", "/"], ["My Projects", "/projects"], ["My Resume", "/resume.pdf"]],
+	      items: [["About", "/"], ["Work", "/projects"], ["Resume", "/resume.pdf"]],
 	      selected: 0
 	    };
 	    _this.buttonIds = {
@@ -26827,12 +26826,8 @@
 	        console.log(this_color);
 	        return _react2.default.createElement(
 	          'div',
-	          { key: this.iter, onClick: this.redirect.bind(this, item[1]), style: { color: this_color } },
-	          _react2.default.createElement(
-	            'h2',
-	            null,
-	            item[0]
-	          )
+	          { className: 'topbar-item', key: this.iter, onClick: this.redirect.bind(this, item[1]) },
+	          item[0]
 	        );
 	      }.bind(this));
 	      return _react2.default.createElement(
@@ -27114,7 +27109,7 @@
 	            _react2.default.createElement(
 	              _project2.default,
 	              { hang: 'right', title: 'Student Software Engineer', sub: 'UT Austin, Fall 2016 - Spring 2017' },
-	              'Implemented database, server, and web app to handle statuses of\n                around 500 elevators across the UT Austin campus'
+	              'Implemented database, server, and web app to handle statuses of\n                500 elevators at UT Austin '
 	            ),
 	            _react2.default.createElement(
 	              _project2.default,

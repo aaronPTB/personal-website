@@ -6,9 +6,9 @@ export default class TopBar extends React.Component {
     super();
     this.state = {
       items: [
-        ["Me", "/"],
-        ["My Projects", "/projects"],
-        ["My Resume", "/resume.pdf"],
+        ["About", "/"],
+        ["Work", "/projects"],
+        ["Resume", "/resume.pdf"],
       ],
       selected: 0
     }
@@ -47,8 +47,8 @@ export default class TopBar extends React.Component {
       var this_color = (item_num == this.state.selected) ? this.lightColor : this.darkColor;
       console.log(this_color);
       return  (
-        <div key={this.iter} onClick={this.redirect.bind(this, item[1])} style={{color: this_color}}>
-          <h2>{item[0]}</h2>
+        <div className="topbar-item" key={this.iter} onClick={this.redirect.bind(this, item[1])}>
+          {item[0]}
         </div>
       )
     }).bind(this));
