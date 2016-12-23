@@ -37,9 +37,9 @@ export default class Projects extends React.Component {
                 camera manipulation and object movement / rotation. Created in
                 2015 for fun.`}
             </Project>
-            <Project hang="left" title="Classcribe">
-              {`Crowdsourced lecture notes for the classroom. Created for
-                HackDFW 2016s`}
+            <Project hang="left" title="Classcribe" sub="HackDFW 2016 Project">
+              {`Crowdsourced lecture notes for the classroom. Built in Meteor
+                framework`}
             </Project>
           </div>
         </div>

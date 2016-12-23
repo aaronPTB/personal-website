@@ -27137,8 +27137,8 @@
 	            ),
 	            _react2.default.createElement(
 	              _project2.default,
-	              { hang: 'left', title: 'Classcribe' },
-	              'Crowdsourced lecture notes for the classroom. Created for\n                HackDFW 2016s'
+	              { hang: 'left', title: 'Classcribe', sub: 'HackDFW 2016 Project' },
+	              'Crowdsourced lecture notes for the classroom. Built in Meteor\n                framework'
 	            )
 	          )
 	        )
