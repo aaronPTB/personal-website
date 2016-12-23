@@ -110,8 +110,9 @@ a {
   line-height: 200%;
   color: #303235;
   padding-top: 30px;
-  width: 830px;
-  max-width: 100%;
+  width: 70%;
+  max-width: 830px;
+  margin: auto;
 }
 
 #projects {

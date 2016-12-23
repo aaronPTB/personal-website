@@ -7,12 +7,12 @@ export default class Projects extends React.Component {
     return (
       <Media query="(max-width: 1000px)">
         {matches => matches ? (
-          <div id="projects" style={{width: "700px"}}>
+          <div id="projects" style={{width: "100%", maxWidth: "500px;"}}>
             <div className="column-1000">
               <div id="projects-title">
                 <h4> My work experience and some projects </h4>
               </div>
-              <div className="column-1-2" style={{marginLeft: "25%", float: "left"}}>
+              <div className="column-1-2" style={{display: "flex", flexDirection: "column", width: "100%", alignItems: "center", float: "left"}}>
                 <Project hang="left" title="Summer Intern, Audible" sub="Newark, NJ. Incoming Summer 2017">
                   {`Incoming summer intern at Audible, an Amazon Company. Project TBD.`}
                 </Project>

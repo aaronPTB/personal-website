@@ -27092,7 +27092,7 @@
 	        function (matches) {
 	          return matches ? _react2.default.createElement(
 	            'div',
-	            { id: 'projects', style: { width: "700px" } },
+	            { id: 'projects', style: { width: "100%", maxWidth: "500px;" } },
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'column-1000' },
@@ -27107,7 +27107,7 @@
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'column-1-2', style: { marginLeft: "25%", float: "left" } },
+	                { className: 'column-1-2', style: { display: "flex", flexDirection: "column", width: "100%", alignItems: "center", float: "left" } },
 	                _react2.default.createElement(
 	                  _project2.default,
 	                  { hang: 'left', title: 'Summer Intern, Audible', sub: 'Newark, NJ. Incoming Summer 2017' },
