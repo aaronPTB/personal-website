@@ -204,6 +204,7 @@ a {
   width: 38vmin;
   border-radius: 38vmin;
   margin: 1vmin;
+  float: left;
   overflow: hidden;
 }
 
