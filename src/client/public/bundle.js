@@ -26871,7 +26871,7 @@
 
 	var _projects2 = _interopRequireDefault(_projects);
 
-	var _links = __webpack_require__(240);
+	var _links = __webpack_require__(244);
 
 	var _links2 = _interopRequireDefault(_links);
 
@@ -26955,6 +26955,15 @@
 	          { className: "column-1000" },
 	          _react2.default.createElement(
 	            "div",
+	            { className: "picture-frame outer" },
+	            _react2.default.createElement(
+	              "div",
+	              { className: "picture-frame inner" },
+	              _react2.default.createElement("img", { className: "pricture-frame picture", src: "me.jpg" })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            "div",
 	            { id: "greeter" },
 	            _react2.default.createElement(
 	              "h1",
@@ -26965,15 +26974,6 @@
 	              "h3",
 	              null,
 	              "I build robots and websites"
-	            )
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "picture-frame outer" },
-	            _react2.default.createElement(
-	              "div",
-	              { className: "picture-frame inner" },
-	              _react2.default.createElement("img", { className: "pricture-frame picture", src: "me.jpg" })
 	            )
 	          )
 	        )
@@ -27058,7 +27058,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _project = __webpack_require__(239);
+	var _reactMedia = __webpack_require__(239);
+
+	var _reactMedia2 = _interopRequireDefault(_reactMedia);
+
+	var _project = __webpack_require__(243);
 
 	var _project2 = _interopRequireDefault(_project);
 
@@ -27083,65 +27087,126 @@
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'div',
-	        { id: 'projects' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'column-1000' },
-	          _react2.default.createElement(
+	        _reactMedia2.default,
+	        { query: '(max-width: 1000px)' },
+	        function (matches) {
+	          return matches ? _react2.default.createElement(
 	            'div',
-	            { id: 'projects-title' },
+	            { id: 'projects', style: { width: "700px" } },
 	            _react2.default.createElement(
-	              'h4',
-	              null,
-	              ' My work experience and some projects '
+	              'div',
+	              { className: 'column-1000' },
+	              _react2.default.createElement(
+	                'div',
+	                { id: 'projects-title' },
+	                _react2.default.createElement(
+	                  'h4',
+	                  null,
+	                  ' My work experience and some projects '
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'column-1-2', style: { marginLeft: "25%", float: "left" } },
+	                _react2.default.createElement(
+	                  _project2.default,
+	                  { hang: 'left', title: 'Summer Intern, Audible', sub: 'Newark, NJ. Incoming Summer 2017' },
+	                  'Incoming summer intern at Audible, an Amazon Company. Project TBD.'
+	                ),
+	                _react2.default.createElement(
+	                  _project2.default,
+	                  { hang: 'left', title: 'Student Software Engineer', sub: 'UT Austin, Fall 2016 - Spring 2017' },
+	                  'Implemented database, server, and web app to handle statuses of\n                    500 elevators at UT Austin '
+	                ),
+	                _react2.default.createElement(
+	                  _project2.default,
+	                  { hang: 'left', title: 'Bioinformatics Research Assistant', sub: 'UT Austin, Summer 2016' },
+	                  'Used statistical techniques and machine learning to identify\n                    genetic expression patterns in neurons.'
+	                ),
+	                _react2.default.createElement(
+	                  _project2.default,
+	                  { hang: 'left', title: 'Mural Painting Robot \'Roboticelli\'' },
+	                  'Ongoing collaborative project with an Artist and the city of\n                    Austin. A robot that can paint murals on walls.'
+	                ),
+	                _react2.default.createElement(
+	                  _project2.default,
+	                  { hang: 'left', title: 'Classify', sub: 'HackTX 2016 Project' },
+	                  'Schedule building system delivering a strong user experience.\n                    University faculty have reached out to us for collaboration.'
+	                ),
+	                _react2.default.createElement(
+	                  _project2.default,
+	                  { hang: 'left', title: 'Simple Rendering Engine' },
+	                  'A simple rendering engine and 3d environment that allows for\n                    camera manipulation and object movement / rotation. Created in\n                    2015 for fun.'
+	                ),
+	                _react2.default.createElement(
+	                  _project2.default,
+	                  { hang: 'left', title: 'Classcribe', sub: 'HackDFW 2016 Project' },
+	                  'Crowdsourced lecture notes for the classroom. Built in Meteor\n                    framework'
+	                )
+	              )
 	            )
-	          ),
-	          _react2.default.createElement(
+	          ) : _react2.default.createElement(
 	            'div',
-	            { className: 'column-1-2', style: { float: "left" } },
-	            _react2.default.createElement('div', { style: { height: "80px" } }),
+	            { id: 'projects' },
 	            _react2.default.createElement(
-	              _project2.default,
-	              { hang: 'right', title: 'Summer Intern, Audible', sub: 'Newark, NJ. Incoming Summer 2017' },
-	              'Incoming summer intern at Audible, an Amazon Company. Project TBD.'
-	            ),
-	            _react2.default.createElement(
-	              _project2.default,
-	              { hang: 'right', title: 'Student Software Engineer', sub: 'UT Austin, Fall 2016 - Spring 2017' },
-	              'Implemented database, server, and web app to handle statuses of\n                500 elevators at UT Austin '
-	            ),
-	            _react2.default.createElement(
-	              _project2.default,
-	              { hang: 'right', title: 'Bioinformatics Research Assistant', sub: 'UT Austin, Summer 2016' },
-	              'Used statistical techniques and machine learning to identify\n                genetic expression patterns in neurons.'
+	              'div',
+	              { className: 'column-1000' },
+	              _react2.default.createElement(
+	                'div',
+	                { id: 'projects-title' },
+	                _react2.default.createElement(
+	                  'h4',
+	                  null,
+	                  ' My work experience and some projects '
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'column-1-2', style: { float: "left" } },
+	                _react2.default.createElement('div', { style: { height: "80px" } }),
+	                _react2.default.createElement(
+	                  _project2.default,
+	                  { hang: 'right', title: 'Summer Intern, Audible', sub: 'Newark, NJ. Incoming Summer 2017' },
+	                  'Incoming summer intern at Audible, an Amazon Company. Project TBD.'
+	                ),
+	                _react2.default.createElement(
+	                  _project2.default,
+	                  { hang: 'right', title: 'Student Software Engineer', sub: 'UT Austin, Fall 2016 - Spring 2017' },
+	                  'Implemented database, server, and web app to handle statuses of\n                    500 elevators at UT Austin '
+	                ),
+	                _react2.default.createElement(
+	                  _project2.default,
+	                  { hang: 'right', title: 'Bioinformatics Research Assistant', sub: 'UT Austin, Summer 2016' },
+	                  'Used statistical techniques and machine learning to identify\n                    genetic expression patterns in neurons.'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'column-1-2', style: { float: "left" } },
+	                _react2.default.createElement(
+	                  _project2.default,
+	                  { hang: 'left', title: 'Mural Painting Robot \'Roboticelli\'' },
+	                  'Ongoing collaborative project with an Artist and the city of\n                    Austin. A robot that can paint murals on walls.'
+	                ),
+	                _react2.default.createElement(
+	                  _project2.default,
+	                  { hang: 'left', title: 'Classify', sub: 'HackTX 2016 Project' },
+	                  'Schedule building system delivering a strong user experience.\n                    University faculty have reached out to us for collaboration.'
+	                ),
+	                _react2.default.createElement(
+	                  _project2.default,
+	                  { hang: 'left', title: 'Simple Rendering Engine' },
+	                  'A simple rendering engine and 3d environment that allows for\n                    camera manipulation and object movement / rotation. Created in\n                    2015 for fun.'
+	                ),
+	                _react2.default.createElement(
+	                  _project2.default,
+	                  { hang: 'left', title: 'Classcribe', sub: 'HackDFW 2016 Project' },
+	                  'Crowdsourced lecture notes for the classroom. Built in Meteor\n                    framework'
+	                )
+	              )
 	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'column-1-2', style: { float: "left" } },
-	            _react2.default.createElement(
-	              _project2.default,
-	              { hang: 'left', title: 'Mural Painting Robot \'Roboticelli\'' },
-	              'Ongoing collaborative project with an Artist and the city of\n                Austin. A robot that can paint murals on walls.'
-	            ),
-	            _react2.default.createElement(
-	              _project2.default,
-	              { hang: 'left', title: 'Classify', sub: 'HackTX 2016 Project' },
-	              'Schedule building system delivering a strong user experience.\n                University faculty have reached out to us for collaboration.'
-	            ),
-	            _react2.default.createElement(
-	              _project2.default,
-	              { hang: 'left', title: 'Simple Rendering Engine' },
-	              'A simple rendering engine and 3d environment that allows for\n                camera manipulation and object movement / rotation. Created in\n                2015 for fun.'
-	            ),
-	            _react2.default.createElement(
-	              _project2.default,
-	              { hang: 'left', title: 'Classcribe', sub: 'HackDFW 2016 Project' },
-	              'Crowdsourced lecture notes for the classroom. Built in Meteor\n                framework'
-	            )
-	          )
-	        )
+	          );
+	        }
 	      );
 	    }
 	  }]);
@@ -27153,6 +27218,205 @@
 
 /***/ },
 /* 239 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _Media = __webpack_require__(240);
+
+	var _Media2 = _interopRequireDefault(_Media);
+
+	function _interopRequireDefault(obj) {
+	  return obj && obj.__esModule ? obj : { default: obj };
+	}
+
+	// TODO: Remove in the next major release.
+	_Media2.default.Media = _Media2.default; /* eslint-env node */
+
+	module.exports = _Media2.default;
+
+/***/ },
+/* 240 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+
+	var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+	exports.__esModule = true;
+
+	var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+	  return typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+	} : function (obj) {
+	  return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+	};
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _json2mq = __webpack_require__(241);
+
+	var _json2mq2 = _interopRequireDefault(_json2mq);
+
+	function _interopRequireDefault(obj) {
+	  return obj && obj.__esModule ? obj : { default: obj };
+	}
+
+	function _classCallCheck(instance, Constructor) {
+	  if (!(instance instanceof Constructor)) {
+	    throw new TypeError("Cannot call a class as a function");
+	  }
+	}
+
+	function _possibleConstructorReturn(self, call) {
+	  if (!self) {
+	    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+	  }return call && ((typeof call === "undefined" ? "undefined" : _typeof2(call)) === "object" || typeof call === "function") ? call : self;
+	}
+
+	function _inherits(subClass, superClass) {
+	  if (typeof superClass !== "function" && superClass !== null) {
+	    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof2(superClass)));
+	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+	}
+
+	var Media = function (_React$Component) {
+	  _inherits(Media, _React$Component);
+
+	  function Media() {
+	    var _temp, _this, _ret;
+
+	    _classCallCheck(this, Media);
+
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _React$Component.call.apply(_React$Component, [this].concat(args))), _this), _this.state = {
+	      matches: true
+	    }, _this.updateMatches = function () {
+	      return _this.setState({ matches: _this.mediaQueryList.matches });
+	    }, _temp), _possibleConstructorReturn(_this, _ret);
+	  }
+
+	  Media.prototype.componentWillMount = function componentWillMount() {
+	    var query = this.props.query;
+
+	    if (typeof query !== 'string') query = (0, _json2mq2.default)(query);
+
+	    if ((typeof window === 'undefined' ? 'undefined' : _typeof(window)) === 'object') {
+	      this.mediaQueryList = window.matchMedia(query);
+	      this.mediaQueryList.addListener(this.updateMatches);
+	      this.updateMatches();
+	    }
+	  };
+
+	  Media.prototype.componentWillUnmount = function componentWillUnmount() {
+	    this.mediaQueryList.removeListener(this.updateMatches);
+	  };
+
+	  Media.prototype.render = function render() {
+	    var _props = this.props;
+	    var children = _props.children;
+	    var render = _props.render;
+	    var matches = this.state.matches;
+
+	    if (matches && render) return render();
+
+	    if (typeof children === 'function') return children(matches);
+
+	    return matches ? _react2.default.Children.only(children) : null;
+	  };
+
+	  return Media;
+	}(_react2.default.Component);
+
+	if (process.env.NODE_ENV !== 'production') {
+	  Media.propTypes = {
+	    query: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.object, _react.PropTypes.arrayOf(_react.PropTypes.object.isRequired)]).isRequired,
+	    render: _react.PropTypes.func,
+	    children: _react.PropTypes.oneOfType([_react.PropTypes.node, _react.PropTypes.func])
+	  };
+	}
+
+	exports.default = Media;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+
+/***/ },
+/* 241 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var camel2hyphen = __webpack_require__(242);
+
+	var isDimension = function isDimension(feature) {
+	  var re = /[height|width]$/;
+	  return re.test(feature);
+	};
+
+	var obj2mq = function obj2mq(obj) {
+	  var mq = '';
+	  var features = Object.keys(obj);
+	  features.forEach(function (feature, index) {
+	    var value = obj[feature];
+	    feature = camel2hyphen(feature);
+	    // Add px to dimension features
+	    if (isDimension(feature) && typeof value === 'number') {
+	      value = value + 'px';
+	    }
+	    if (value === true) {
+	      mq += feature;
+	    } else if (value === false) {
+	      mq += 'not ' + feature;
+	    } else {
+	      mq += '(' + feature + ': ' + value + ')';
+	    }
+	    if (index < features.length - 1) {
+	      mq += ' and ';
+	    }
+	  });
+	  return mq;
+	};
+
+	var json2mq = function json2mq(query) {
+	  var mq = '';
+	  if (typeof query === 'string') {
+	    return query;
+	  }
+	  // Handling array of media queries
+	  if (query instanceof Array) {
+	    query.forEach(function (q, index) {
+	      mq += obj2mq(q);
+	      if (index < query.length - 1) {
+	        mq += ', ';
+	      }
+	    });
+	    return mq;
+	  }
+	  // Handling single media query
+	  return obj2mq(query);
+	};
+
+	module.exports = json2mq;
+
+/***/ },
+/* 242 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	var camel2hyphen = function camel2hyphen(str) {
+	  return str.replace(/[A-Z]/g, function (match) {
+	    return '-' + match.toLowerCase();
+	  }).toLowerCase();
+	};
+
+	module.exports = camel2hyphen;
+
+/***/ },
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27275,7 +27539,7 @@
 	exports.default = Project;
 
 /***/ },
-/* 240 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
