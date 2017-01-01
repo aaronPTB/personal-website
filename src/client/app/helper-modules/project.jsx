@@ -20,13 +20,13 @@ export default class Project extends React.Component {
             <div className="marker"></div>
           </div>
           <div className="column-rest" style={{float: "right"}}>
-            <div className="project-title" style={{textAlign: "left"}}>
+            <div className="project-title" style={{textAlign: "right"}}>
               {this.props.title}
             </div>
-            <div className="project-subtitle" style={{textAlign: "left"}}>
+            <div className="project-subtitle" style={{textAlign: "right"}}>
               {this.props.sub}
             </div>
-            <div className="project-desc" style={{textAlign: "left"}}>
+            <div className="project-desc" style={{textAlign: "right"}}>
               {this.props.children}
             </div>
           </div>
@@ -37,13 +37,13 @@ export default class Project extends React.Component {
       this.renderHTML = (
         <div className="project">
           <div className="column-rest" style={{float: "left"}}>
-            <div className="project-title" style={{textAlign: "right"}}>
+            <div className="project-title" style={{textAlign: "left"}}>
               {this.props.title}
             </div>
-            <div className="project-subtitle" style={{textAlign: "right"}}>
+            <div className="project-subtitle" style={{textAlign: "left"}}>
               {this.props.sub}
             </div>
-            <div className="project-desc" style={{textAlign: "right"}}>
+            <div className="project-desc" style={{textAlign: "left"}}>
               {this.props.children}
             </div>
           </div>

@@ -164,7 +164,7 @@ a {
 .column-rest {
   height: 100%;
   width: 480px;
-  max-width: 50vh;
+  max-width: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
