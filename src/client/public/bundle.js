@@ -27474,17 +27474,17 @@
 	            { className: "column-rest", style: { float: "right" } },
 	            _react2.default.createElement(
 	              "div",
-	              { className: "project-title", style: { textAlign: "right" } },
+	              { className: "project-title", style: { textAlign: "left" } },
 	              this.props.title
 	            ),
 	            _react2.default.createElement(
 	              "div",
-	              { className: "project-subtitle", style: { textAlign: "right" } },
+	              { className: "project-subtitle", style: { textAlign: "left" } },
 	              this.props.sub
 	            ),
 	            _react2.default.createElement(
 	              "div",
-	              { className: "project-desc", style: { textAlign: "right" } },
+	              { className: "project-desc", style: { textAlign: "left" } },
 	              this.props.children
 	            )
 	          )
@@ -27498,17 +27498,17 @@
 	            { className: "column-rest", style: { float: "left" } },
 	            _react2.default.createElement(
 	              "div",
-	              { className: "project-title", style: { textAlign: "left" } },
+	              { className: "project-title", style: { textAlign: "right" } },
 	              this.props.title
 	            ),
 	            _react2.default.createElement(
 	              "div",
-	              { className: "project-subtitle", style: { textAlign: "left" } },
+	              { className: "project-subtitle", style: { textAlign: "right" } },
 	              this.props.sub
 	            ),
 	            _react2.default.createElement(
 	              "div",
-	              { className: "project-desc", style: { textAlign: "left" } },
+	              { className: "project-desc", style: { textAlign: "right" } },
 	              this.props.children
 	            )
 	          ),
