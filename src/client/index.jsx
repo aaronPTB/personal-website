@@ -11,7 +11,6 @@ class App extends React.Component {
       <Router history={browserHistory}>
         <Route path="/" component={Main}>
           <IndexRoute component={Home}/>
-          <Route path="projects" component={Projects}/>
         </Route>
       </Router>
     )
