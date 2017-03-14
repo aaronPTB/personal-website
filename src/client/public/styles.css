@@ -12,10 +12,10 @@ html, body {
 
 h1 {
   line-height: inherit;
-  color: inherit;
   font-size: 105px;
   font-family: 'Karla', sans-serif;
   font-weight: inherit;
+  color: inherit;
 }
 
 h2 {
@@ -29,7 +29,7 @@ h2 {
 
 h3 {
   line-height: inherit;
-  color: #C5CAE9;
+  color: rgba(63, 81, 181, 1);
   font-size: 37px;
   font-family: 'Karla', sans-serif;
   display: inline;
@@ -89,7 +89,7 @@ a {
 @media (min-width: 1000px) {
   #greeter {
       height: 300px;
-      color: #E8EAF6;
+      color: #3F51B5;
       padding-top: 40vh;
       float: left;
   }
