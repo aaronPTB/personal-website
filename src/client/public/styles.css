@@ -7,7 +7,7 @@
 }
 
 html, body {
-  background-color: #E8EAF6;
+  background-color: #F5F5F5;
 }
 
 h1 {
@@ -28,12 +28,13 @@ h2 {
 }
 
 h3 {
-  line-height: inherit;
-  color: rgba(63, 81, 181, 1);
-  font-size: 37px;
+  line-height: inherit;  
+  color: #303235;
+  font-size: 20px;
   font-family: 'Karla', sans-serif;
   display: inline;
   font-weight: inherit;
+  line-height: 200%;
 }
 
 h4 {
@@ -80,28 +81,19 @@ a {
 #hero {
   height: 90vh;
   width: 100%;
-  background-color: #3F51B5;
+  /*background-color: #3F51B5;*/
   /*box-shadow: 0px 0px 2px 2px #303235;*/
+  text-align: center;
   display: flex;
   justify-content: center;
 }
 
-@media (min-width: 1000px) {
-  #greeter {
-      height: 300px;
-      color: #3F51B5;
-      padding-top: 40vh;
-      float: left;
-  }
-}
-@media (max-width: 1000px) {
-  #greeter {
-      height: 300px;
-      color: #E8EAF6;
-      padding-top: 10vh;
-      margin: auto;
-      text-align: center;
-  }
+#greeter {
+    height: 300px;
+    width: 600px;
+    color: #3F51B5;
+    text-align: center;
+    margin: auto;
 }
 
 
@@ -144,11 +136,14 @@ a {
 }
 
 .column-1000 {
-  height: auto;
+  height: 90%;
   display: table;
   width: 100vw;
   max-width: 1000px;
-  margin: auto;
+  padding-top: 100px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .column-20 {
@@ -175,29 +170,14 @@ a {
   width: 50%;
 }
 
-@media (min-width: 1000px) {
-  .picture-frame.outer {
-    height: 40vmin;
-    width: 40vmin;
-    border-radius: 40vmin;
-    /*box-shadow: 0px 0px 5px 0px #303235;*/
-    background-color: #3949AB;
-    float: right;
-    margin-top: 30vh;
-  }
-}
-
-@media (max-width: 1000px) {
-  .picture-frame.outer {
-    height: 40vmin;
-    width: 40vmin;
-    border-radius: 40vmin;
-    /*box-shadow: 0px 0px 5px 0px #303235;*/
-    background-color: #3949AB;
-    margin-top: 10vh;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.picture-frame.outer {
+  height: 40vmin;
+  width: 40vmin;
+  border-radius: 40vmin;
+  /*box-shadow: 0px 0px 5px 0px #303235;*/
+  background-color: #3949AB;
+  float: right;
+  margin-top: 30vh;
 }
 
 .picture-frame.inner {

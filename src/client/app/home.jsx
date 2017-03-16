@@ -9,8 +9,8 @@ export default class Home extends React.Component {
     return (
       <div>
         <Hero/>
-        <About/>
-        <Projects/>
+        {/*<About/>
+        <Projects/>*/}
         <Links/>
       </div>
     )
