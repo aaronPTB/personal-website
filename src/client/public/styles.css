@@ -125,7 +125,15 @@ a {
   color: #303235;
   padding-top: 30px;
   height: 10vh;
-  z-index: 2;
+  max-width: none;
+}
+
+@media screen and (min-height: 750px) {
+  #links {  
+    height: 75px;
+    position: absolute;
+    bottom: 0px;
+  }
 }
 
 .topbar-item {
