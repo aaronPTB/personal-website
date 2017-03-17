@@ -12,7 +12,7 @@ html, body {
 
 h1 {
   line-height: inherit;
-  font-size: 105px;
+  font-size: 90px;
   font-family: 'Karla', sans-serif;
   font-weight: inherit;
   color: inherit;
@@ -89,7 +89,6 @@ a {
 }
 
 #greeter {
-    height: 300px;
     width: 600px;
     color: #3F51B5;
     text-align: center;
@@ -126,6 +125,7 @@ a {
   color: #303235;
   padding-top: 30px;
   height: 10vh;
+  z-index: 2;
 }
 
 .topbar-item {
@@ -140,7 +140,7 @@ a {
   display: table;
   width: 100vw;
   max-width: 1000px;
-  padding-top: 100px;
+  padding-top: 30px;
   margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
@@ -171,22 +171,34 @@ a {
 }
 
 .picture-frame.outer {
-  height: 40vmin;
-  width: 40vmin;
-  border-radius: 40vmin;
-  /*box-shadow: 0px 0px 5px 0px #303235;*/
-  background-color: #3949AB;
-  float: right;
-  margin-top: 30vh;
+  height: 200px;
+  width: 200px;
+  border-radius: 200px;
+  box-shadow: 0px 0px 5px 0px #303235;
+  opacity: 1;
+  /*background-color: #3949AB;*/
+  margin: auto;
+  transition: border-radius .5s, width .5s, height .5s, opacity .5s;
 }
 
 .picture-frame.inner {
-  height: 38vmin;
-  width: 38vmin;
-  border-radius: 38vmin;
-  margin: 1vmin;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
   float: left;
   overflow: hidden;
+}
+
+@media screen and (max-height: 750px) {
+  .picture-frame.outer {
+    height: 0vmin;
+    width: 0vmin;
+    border-radius: 0vmin;
+    opacity: 0;
+  }
+  .column-1000 {
+    padding-top: 12vh;
+  }
 }
 
 .picture-frame.picture {

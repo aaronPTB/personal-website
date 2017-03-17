@@ -27096,21 +27096,30 @@
 	          { className: "column-1000" },
 	          _react2.default.createElement(
 	            "div",
+	            { className: "picture-frame outer" },
+	            _react2.default.createElement(
+	              "div",
+	              { className: "picture-frame inner" },
+	              _react2.default.createElement("img", { className: "pricture-frame picture", src: "me.jpg" })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            "div",
 	            { id: "greeter" },
 	            _react2.default.createElement(
 	              "h1",
 	              null,
 	              "I'm Aaron"
 	            ),
-	            _react2.default.createElement("br", null),
-	            _react2.default.createElement("br", null),
 	            _react2.default.createElement(
 	              "h3",
 	              null,
-	              "Student in the class of UT'19 pursuing a B.S. in Computer Science. Incoming summer intern on the Audible Web QA team.",
+	              "UT Computer Science student graduating in 2019.",
+	              _react2.default.createElement("br", null),
+	              "Incoming summer intern on the Audible Web QA team.",
 	              _react2.default.createElement("br", null),
 	              _react2.default.createElement("br", null),
-	              "I've done a lot of stuff at UT, including building an awesome mural-painting robot (and demoing it at SXSW Create 2017!), bioinformatics research, and working with faculty to build a better course scheduler.",
+	              "I work a lot to improve the community around me, including building an awesome mural-painting robot (and demoing it at SXSW Create 2017!), bioinformatics research, and working with faculty to build a better course scheduler.",
 	              _react2.default.createElement("br", null),
 	              _react2.default.createElement("br", null),
 	              "Check out my ",

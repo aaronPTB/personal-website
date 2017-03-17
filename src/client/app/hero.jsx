@@ -5,20 +5,18 @@ export default class Hero extends React.Component {
     return (
       <div id="hero">
         <div className="column-1000">
-          {/*<div className="picture-frame outer">
+          <div className="picture-frame outer">
             <div className="picture-frame inner">
               <img className="pricture-frame picture" src="me.jpg"/>
             </div>
-          </div>*/}
+          </div>
           <div id="greeter">
             <h1>I'm Aaron</h1>
-            <br/>
-            <br/>
             <h3>
-              Student in the class of UT'19 pursuing a B.S. in Computer Science.
+              UT Computer Science student graduating in 2019.<br/>
               Incoming summer intern on the Audible Web QA team.
               <br/><br/>
-              I've done a lot of stuff at UT, including building an awesome 
+              I work a lot to improve the community around me, including building an awesome 
               mural-painting robot (and demoing it at SXSW Create 2017!), 
               bioinformatics research, and working with faculty to build 
               a better course scheduler.
